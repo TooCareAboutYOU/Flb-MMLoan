@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_F5F5F5"
+        android:paddingLeft="@dimen/dp16"
+        android:paddingRight="@dimen/dp16"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="@dimen/dp5"
+            card_view:cardElevation="@dimen/dp2"
+            android:layout_marginTop="@dimen/dp14">
+
+            <ImageView
+                android:id="@+id/iv_item_found"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp170"
+                android:scaleType="fitXY" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp16"
+            android:paddingTop="@dimen/dp16"
+            android:text="活动期间在秒秒分期借款，即享40元红包"
+            android:textColor="@color/black_333333"
+            android:textSize="16sp" />
+
+        <View style="@style/ViewStyle" />
+    </LinearLayout>
+</layout>

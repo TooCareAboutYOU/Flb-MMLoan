@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Flb-MMLoan.iml" filepath="$PROJECT_DIR$/Flb-MMLoan.iml" group="Flb-MMLoan" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Flb-MMLoan/app" />
+      <module fileurl="file://$PROJECT_DIR$/baselibrary/baselibrary.iml" filepath="$PROJECT_DIR$/baselibrary/baselibrary.iml" group="Flb-MMLoan/baselibrary" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" group="Flb-MMLoan/library" />
+      <module fileurl="file://$PROJECT_DIR$/multi-image-selector/multi-image-selector.iml" filepath="$PROJECT_DIR$/multi-image-selector/multi-image-selector.iml" group="Flb-MMLoan/multi-image-selector" />
+      <module fileurl="file://$PROJECT_DIR$/pickerview/pickerview.iml" filepath="$PROJECT_DIR$/pickerview/pickerview.iml" group="Flb-MMLoan/pickerview" />
+      <module fileurl="file://$PROJECT_DIR$/usercenter/usercenter.iml" filepath="$PROJECT_DIR$/usercenter/usercenter.iml" group="Flb-MMLoan/usercenter" />
+    </modules>
+  </component>
+</project>

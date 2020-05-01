@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--debug调试
+        适配Android 6.0
+    -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates
+                overridePins="true"
+                src="system" />
+            <certificates
+                overridePins="true"
+                src="user" />
+        </trust-anchors>
+    </base-config>
+
+    <!--线上发布
+        1、适配Android 8.1及其以下系统,选择停用明文流量
+    -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">flbapi.358fintech.com</domain>
+        <domain includeSubdomains="true">up-as0.qiniup.com</domain>
+    </domain-config>
+</network-security-config>

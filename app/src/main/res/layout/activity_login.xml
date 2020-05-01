@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/bg_F5F5F5">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/white"
+			android:gravity="center_horizontal"
+			android:orientation="vertical"
+			android:paddingLeft="@dimen/dp40"
+			android:paddingRight="@dimen/dp40">
+
+			<ImageView
+                android:id="@+id/iv_test"
+				android:layout_width="@dimen/dp72"
+				android:layout_height="@dimen/dp72"
+				android:layout_marginTop="@dimen/dp36"
+				android:scaleType="fitXY"
+				android:src="@drawable/mmloan" />
+
+			<LinearLayout
+				style="@style/LinearRegisterStyle"
+				android:layout_marginTop="@dimen/dp48">
+
+				<ImageView
+					style="@style/IvRegisterStyle"
+					android:src="@drawable/phone" />
+
+				<com.mmkjflb.mmloan.utils.view.DeleteEditText
+					android:id="@+id/et_login_account"
+					style="@style/EtInputPhoneStyle"
+					android:hint="@string/mobile_numb" />
+
+			</LinearLayout>
+
+			<View style="@style/ViewStyle" />
+
+			<LinearLayout
+				style="@style/LinearRegisterStyle"
+				android:layout_marginTop="@dimen/dp12">
+
+				<ImageView
+					style="@style/IvRegisterStyle"
+					android:src="@drawable/password" />
+
+				<EditText
+					android:id="@+id/et_login_password"
+					style="@style/EtWeightCommonStyle"
+					android:hint="@string/password"
+					android:inputType="textPassword"
+					android:maxLength="18" />
+
+				<CheckBox
+					android:id="@+id/ck_login_password"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:button="@drawable/password_selector"
+					android:checked="true"
+					android:gravity="right|center_vertical"
+					android:paddingLeft="@dimen/dp4"
+					android:paddingRight="@dimen/dp4" />
+
+			</LinearLayout>
+
+			<View style="@style/ViewStyle" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/btn_login_forgetpwd"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginTop="@dimen/dp10"
+				android:paddingBottom="@dimen/dp10"
+				android:paddingLeft="@dimen/dp2"
+				android:paddingTop="@dimen/dp10"
+				android:text="@string/forget_pwd_wen"
+				android:textSize="14sp" />
+
+			<TextView
+				android:id="@+id/btn_login"
+				style="@style/LoginButtonTheme"
+				android:layout_marginTop="@dimen/dp20"
+				android:enabled="false"
+				android:text="@string/login" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/btn_register"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginTop="@dimen/dp20"
+				android:paddingBottom="@dimen/dp10"
+				android:paddingTop="@dimen/dp10"
+				android:textSize="16sp"/>
+		</LinearLayout>
+
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:scaleType="fitXY"
+			android:src="@drawable/login_bg" />
+	</RelativeLayout>
+
+
+</layout>

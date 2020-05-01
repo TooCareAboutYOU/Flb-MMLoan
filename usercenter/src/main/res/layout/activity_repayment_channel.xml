@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_F5F5F5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            android:background="@color/white"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp0"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:src="@drawable/back_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/repayment_channel"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/iv_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp15"
+                android:src="@drawable/icon_check"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp20"
+            app:layout_constraintTop_toBottomOf="@id/top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp15"
+                    android:paddingTop="@dimen/dp20"
+                    android:paddingBottom="@dimen/dp17">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Please use the following information to pay backloan"
+                        android:textColor="#ff333333"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp13"
+                        android:text="· Use SKYPAY as merchant"
+                        android:textColor="#ff333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="· Your Contract Number: SKY07xxxxxxx (SKY07 and 13 digits\n  numbers which showing on your apps)"
+                        android:textColor="#ff333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="· Amount you need to pay back: PHP xxxx"
+                        android:textColor="#ff333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_711_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/top">
+
+                    <LinearLayout style="@style/LinearIdInform">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:text="@string/region" />
+
+                        <TextView
+                            android:id="@+id/tv_region"
+                            style="@style/TvIdInformRightDrawable"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pls_chose_island"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <View style="@style/line_marginleft_16dp" />
+
+                    <!--省份-->
+                    <LinearLayout style="@style/LinearIdInform">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:text="@string/province" />
+
+                        <TextView
+                            android:id="@+id/tv_province"
+                            style="@style/TvIdInformRightDrawable"
+                            android:hint="@string/pls_chose_province"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <View style="@style/line_marginleft_16dp" />
+
+                    <!--城市-->
+                    <LinearLayout style="@style/LinearIdInform">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:text="@string/city2" />
+
+                        <TextView
+                            android:id="@+id/tv_city"
+                            style="@style/TvIdInformRightDrawable"
+                            android:hint="@string/pls_chose_city"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btn_submit"
+                        style="@style/ButtonTheme"
+                        android:layout_marginLeft="@dimen/dp16"
+                        android:layout_marginTop="@dimen/dp48"
+                        android:layout_marginRight="@dimen/dp16"
+                        android:enabled="false"
+                        android:text="@string/confirm" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

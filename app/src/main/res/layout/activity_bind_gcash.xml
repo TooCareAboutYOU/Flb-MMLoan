@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_F7F6F9">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp128"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_top" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linear_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                layout="@layout/include_toolbar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nsvBindGcash"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="@dimen/dp0"
+                android:layout_marginTop="@dimen/dp6"
+                android:paddingBottom="@dimen/dp13"
+                app:layout_constraintBottom_toTopOf="@+id/rlBottom"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/commoninclude_toolbar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp10">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvBindGcash"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/sp13"
+                        android:paddingHorizontal="@dimen/dp18"
+                        android:layout_marginTop="@dimen/dp12"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:text="If you do not repay this loan by the final due date,you will be charged an additional 10%fee."/>
+
+
+                    <LinearLayout
+                        android:id="@+id/llIncrease"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp17"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp17"
+                        android:background="@drawable/radius6_white_shape"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/dp14"
+                        android:paddingBottom="@dimen/dp16"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvIncreaseShow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            tools:text="Fill up employer info to increase\ncredit limit to 2500" />
+
+                        <TextView
+                            android:id="@+id/tvFillUp"
+                            android:layout_width="@dimen/dp150"
+                            android:layout_height="@dimen/dp38"
+                            android:layout_marginTop="@dimen/dp8"
+                            android:background="@drawable/radius3_btn_main"
+                            android:gravity="center"
+                            android:text="Fill up"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp15" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_show_gcash"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp17"
+                        android:layout_marginTop="@dimen/dp16"
+                        android:background="#F5F5FA"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/dp18"
+                        android:paddingVertical="@dimen/dp20"
+                        android:visibility="gone">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp20"
+                            android:text="GCash account number "
+                            android:textColor="#ff333333"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_gCash_account"
+                            fontPath="fonts/DIN1451.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp13"
+                            android:text="09312345676543212"
+                            android:textColor="#ff25c69b"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp35"
+                            android:text="Please make sure the GCash account is correct,such as due to a GCash account error the loan is not available, and the consequences are borne by itself."
+                            android:textColor="#ffa4a4a4"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_modify"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp43"
+                            android:layout_marginTop="@dimen/dp15"
+                            android:background="@drawable/radius3_main_hollow_shape"
+                            android:gravity="center"
+                            android:text="Modify"
+                            android:textColor="#ff25c69b"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_bind_gcash"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp17"
+                        android:layout_marginTop="@dimen/dp16"
+                        android:background="@drawable/radius4_white_shape"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/dp18"
+                        android:paddingVertical="@dimen/dp20"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/dp18"
+                            android:text="Linked your GCash accout, get remittance immediately without going to any pawnshop! "
+                            android:textColor="#ff333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GCash account number"
+                            android:textColor="#ff333333"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/et_gCash_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:background="@null"
+                            android:hint="Enter your GCash account number"
+                            android:inputType="number"
+                            android:textColorHint="#ffc7c7c7"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp1"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:background="#ffe1e1e1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp18"
+                            android:text="Verification code"
+                            android:textColor="#ff333333"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_sms_code"
+                                android:layout_width="@dimen/dp0"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:hint="Enter your verification code"
+                                android:inputType="number"
+                                android:textColorHint="#ffc7c7c7"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_get_code"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/radius3_main_hollow_shape"
+                                android:paddingHorizontal="@dimen/dp12"
+                                android:paddingVertical="@dimen/dp10"
+                                android:text="Get code"
+                                android:textColor="#ff25c69b"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp1"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:background="#ffe1e1e1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:text="*The verification code will send to your GCash account number"
+                            android:textColor="#ffff931f"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_link_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp43"
+                            android:layout_marginTop="@dimen/dp13"
+                            android:background="@drawable/radius3_main_hollow_shape"
+                            android:gravity="center"
+                            android:text="Link account"
+                            android:textColor="#ff25c69b"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rlBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:padding="@dimen/dp10">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/actv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_auth"
+                    android:textColor="#FF931F"
+                    android:textSize="10sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:text="Skip remittance via GCash，\nclick “ Continue Verifying ”"
+                    android:textColor="#ff333333"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/actv" />
+
+                <TextView
+                    android:id="@+id/tv_next"
+                    android:layout_width="@dimen/dp140"
+                    android:layout_height="@dimen/dp39"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/radius3_btn_main"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/actv"
+                    app:layout_constraintTop_toTopOf="@+id/tv"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv"
+                    android:gravity="center"
+                    android:text="Continue Verifying"
+                    android:textColor="#ffffffff"
+                    android:textSize="13sp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+
+</layout>

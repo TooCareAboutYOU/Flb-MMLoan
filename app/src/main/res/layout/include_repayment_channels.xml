@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_channels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius4_white_shape"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llC_NowChannels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dp20"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingRight="@dimen/dp20"
+            android:visibility="gone"
+            tools:visibility="visible">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acTv_ToP_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:paddingTop="@dimen/dp22_5"
+                android:text="Repay using payment code"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="?android:actionBarSize"
+                android:gravity="center_vertical"
+                android:text="Current repayment channel"
+                android:textColor="#ff333333"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_radius5_stroke_efefef_solid_f2f2f7"
+                android:paddingTop="@dimen/dp15"
+                android:paddingBottom="@dimen/dp15">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/acImg_NowChannel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    tools:src="@drawable/img_channels_711_12" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dp20"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingRight="@dimen/dp20"
+            android:paddingBottom="@dimen/dp10">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acTc_LeftTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="?android:actionBarSize"
+                android:gravity="center_vertical"
+                android:text="Change to "
+                android:textColor="#ff333333"
+                android:textSize="12sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_channels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/acTv_ChangeTimes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingStart="@dimen/dp20"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingRight="@dimen/dp20"
+            android:paddingBottom="@dimen/dp10"
+            tools:text="After the 7-11 repayment is successful, please wait for  processing. If there is any issue, please contact customer service: (02) 7532306"
+            android:textColor="#FF9600"
+            android:textSize="@dimen/sp11"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp10"
+            android:background="@color/bg_F5F5F5" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_loan_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@android:color/white"
+            android:paddingStart="@dimen/dp20"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingRight="@dimen/dp20"
+            android:paddingBottom="@dimen/dp20"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/view_dotted_line"
+                android:layout_width="match_parent"
+                android:layout_height="?android:actionBarSize"
+                android:gravity="center_vertical"
+                android:text="Other repayment channel"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="@dimen/sp15"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_repay_through_bank"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:background="@drawable/shape_radius5_frame_efefef"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp12"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_dotted_line">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/acIv_repay_through_bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cb_position_unselect"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/acIv_bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:src="@drawable/icon_bank_transfer"
+                    app:layout_constraintBottom_toBottomOf="@id/acIv_repay_through_bank"
+                    app:layout_constraintLeft_toRightOf="@id/acIv_repay_through_bank"
+                    app:layout_constraintTop_toTopOf="@id/acIv_repay_through_bank" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:text="@string/bank_repay"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintBottom_toBottomOf="@id/acIv_bank"
+                    app:layout_constraintLeft_toRightOf="@id/acIv_bank"
+                    app:layout_constraintTop_toTopOf="@id/acIv_bank" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp10"
+            android:background="@color/bg_F5F5F5" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

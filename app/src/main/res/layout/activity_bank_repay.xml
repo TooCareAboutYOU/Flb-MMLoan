@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@color/bg_F5F5F5"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bank_repay_background"
+                tools:ignore="MissingConstraints"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:paddingHorizontal="@dimen/dp15"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp5"
+                    android:src="@drawable/back_white"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/bank_repay"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_title"
+                android:layout_marginHorizontal="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/radius4_white_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/dp15"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_point"
+                    android:drawablePadding="@dimen/dp4"
+                    android:text="@string/bank_repay_top_msg"
+                    android:textColor="@color/black_333333"
+                    android:textSize="16sp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp22"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_bank_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bank_card"
+                        android:textColor="@color/black_333333"
+                        android:textSize="13sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_bank_name_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/black_333333"
+                        android:textSize="13sp"
+                        tools:text="BCA"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp22"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_bank_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bank_repay_number"
+                        android:textColor="@color/black_333333"
+                        android:textSize="13sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_bank_number_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/black_333333"
+                        android:textSize="13sp"
+                        tools:text="0999-3278-18"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp22"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bank_repay_name"
+                        android:textColor="@color/black_333333"
+                        android:textSize="13sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_user_name_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/black_333333"
+                        android:textSize="13sp"
+                        tools:text="LIANLIAN GAO"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_top"
+                android:layout_marginBottom="@dimen/dp11"
+                android:layout_marginHorizontal="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/radius4_white_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/dp15"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_point"
+                    android:drawablePadding="@dimen/dp4"
+                    android:text="@string/bank_repay_bottom_msg"
+                    android:textColor="@color/black_333333"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:text="@string/bank_card"
+                    android:textColor="@color/black_333333"
+                    android:textSize="12sp"
+                    />
+
+                <EditText
+                    android:id="@+id/et_bank_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/bank_repay_input_bank_name"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:text="@string/bank_repay_branch_name"
+                    android:textColor="@color/black_333333"
+                    android:textSize="12sp"
+                    />
+
+                <EditText
+                    android:id="@+id/et_branch_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/bank_repay_input_branch_name"
+                    android:textSize="14sp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp30">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bank_repay_upload_slip"
+                        android:textColor="@color/black_333333"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_look_example"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:drawableLeft="@drawable/icon_look"
+                        android:drawablePadding="@dimen/dp4"
+                        android:text="@string/bank_repay_view_example"
+                        android:textColor="#398DFF"
+                        android:textSize="12sp"
+                        />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_voucher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp126"
+                    android:layout_marginTop="@dimen/dp14"
+                    android:scaleType="center"
+                    android:layout_marginBottom="@dimen/dp18"
+                    android:src="@drawable/data_update_bg" />
+                <Button
+                    android:id="@+id/btn_upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    style="@style/ButtonTheme"
+                    android:background="@drawable/radius3_btn_blue"
+                    android:enabled="false"
+                    android:text="@string/bank_repay_upload"
+                    />
+                <LinearLayout
+                    android:id="@+id/ll_group_bottom"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="@dimen/dp40">
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/radius3_gray_shape"
+                        android:text="@string/cancel"
+                        android:textColor="@color/black_333333"
+                        />
+                    <Button
+                        android:id="@+id/btn_confirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/radius0_btn_main"
+                        android:layout_marginLeft="@dimen/dp14"
+                        android:text="@string/bank_repay_upload"
+                        android:textColor="@color/white"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</layout>

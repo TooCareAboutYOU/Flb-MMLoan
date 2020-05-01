@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- pressed 特别注意排放顺序呢-->
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <gradient android:angle="45" android:centerColor="@color/color_middle" android:endColor="@color/color_end" android:startColor="@color/color_start" android:type="linear" />
+        </shape>
+    </item>
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <solid android:color="#ffd7d7db" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="mis_folder_all">Foto keseluruhan</string>
+    <string name="mis_msg_no_camera">Tanpa sistem kamera</string>
+    <string name="mis_msg_amount_limit">Sudah mencapai jumlah pilihan tertinggi</string>
+    <string name="mis_action_done">Selesai</string>
+    <string name="mis_action_button_string">%1$s(%2$d/%3$d)</string>
+    <string name="mis_photo_unit">Buka</string>
+    <string name="mis_tip_take_photo">Take a photo</string>
+    <string name="mis_error_image_not_exist">Kesalahan gambar</string>
+    <string name="mis_error_no_permission">Silakan ke manajemen otoritas untuk mengaktifkan izin penyimpanan kamera dan telepon</string>
+    <string name="mis_permission_dialog_title">Ijin ditolak</string>
+    <string name="mis_permission_dialog_ok">Baik</string>
+    <string name="mis_permission_dialog_cancel">Tolak</string>
+    <string name="mis_permission_rationale_write_storage">Menyimpan gambar foto memerlukan Anda memberikan izin penyimpanan tulis</string>
+</resources>

@@ -1,0 +1,331 @@
+<resources>
+
+    <string name="app_name">MMloan</string>
+    <string name="island">Company Archipelagos</string>
+    <string name="pls_chose_village">Select a Barangay</string>
+    <!--============================wangjieyan id========================================-->
+    <!--contact information-->
+    <string name="the_contact_one">Emergency Contact 1</string>
+    <string name="the_contact_two">Emergency Contact 2</string>
+    <string name="the_contact_three">Emergency Contact 3</string>
+    <string name="the_contact_phone_number">Mobile Number</string>
+    <string name="the_contact_name">Name</string>
+    <string name="the_contact_relation">Relationship</string>
+    <string name="the_contact_choose_phone">Enter a Contact Mobile Number</string>
+    <string name="the_contact_real_name">Enter the Name of Contact Person</string>
+    <string name="the_contact_choose_relation">Select Relationship With Contact Person</string>
+    <string name="pls_chose_relationship">Relationship</string>
+    <string name="open_readcall_permission">Please go to set up the "read call" or "contact" permission</string>
+    <string name="open_contact_permission">Please go to set up the "contact" permission</string>
+    <string name="open_login_permission">Please go to set up the "device info" or "location" permission</string>
+    <string name="open_phonestate_permission">Please go to set up the "device info" permission</string>
+    <string name="toast_phone_number_is_true">Please check if the camera permission is turned on or the selected phone number format is correct.</string>
+    <string name="toast_same_person">Contacts already exist</string>
+    <!--employment information-->
+    <string name="work_nature">Type of work</string>
+    <string name="company_name">Company Name</string>
+
+    <string name="company_tele">Company Phone</string>
+    <string name="company_email">Company Email</string>
+    <string name="company_postcode">Company postal code</string>
+    <string name="company_nature">Nature of the Company</string>
+    <string name="work_jobs">Occupation</string>
+    <string name="work_time">Employment Duration</string>
+    <string name="work_time_title">Employment</string>
+    <string name="company_address">Archipelagos</string>
+    <string name="company_province">Region</string>
+    <string name="company_city">City</string>
+    <string name="detailed_address">Address</string>
+    <string name="month_income">Monthly Income</string>
+    <string name="pay_cycle">Pay Cycle</string>
+    <string name="pay_cycle_day1">Pay 1 Date</string>
+    <string name="pay_cycle_day2">Pay 2 Date</string>
+    <string name="pay_cycle_day3">Pay 3 Date</string>
+    <string name="pay_cycle_day4">Pay 4 Date</string>
+
+
+    <string name="company_name_hint">Company Name</string>
+    <string name="company_tele_hint">Company Phone Number</string>
+    <string name="company_email_hint">Company Email Address</string>
+    <string name="company_nature_hint">Select the Nature</string>
+    <string name="work_jobs_hint">Select Career</string>
+    <string name="work_time_hint">Select the Date of Your Career</string>
+    <string name="company_postcode_hint">Company Postal Code</string>
+    <string name="company_address_hint">Mohon masukkan alamat kantor</string>
+    <string name="detailed_address_hint">Enter detailed address</string>
+    <string name="month_income_hint">Enter Monthly Income</string>
+    <string name="pay_cycle_hint">Select pay cycle</string>
+
+    <string name="pay_cycle_hint_day1">Select Payday 1 Date</string>
+    <string name="pay_cycle_hint_day2">Select Payday 2 Date</string>
+    <string name="pay_cycle_hint_day3">Select Payday 3 Date</string>
+    <string name="pay_cycle_hint_day4">Select Payday 4 Date</string>
+    <string name="same_pay_day">Payday can\'t be the same day</string>
+
+
+    <string name="school">School</string>
+    <string name="student_id">Student card number</string>
+    <string name="school_hint">Enter the name of the school</string>
+    <string name="student_id_hint">Enter the student number</string>
+
+    <string name="upload_employment_certificate_font">Upload company ID(Front)</string>
+    <string name="upload_employment_certificate_back">Upload company ID(Back)</string>
+    <string name="update_company_image">Upload Latest Salary Slip</string>
+    <string name="update_company_license">Upload surat izin perusahaan</string>
+    <string name="update_student_image">Upload kartu identitas pelajar</string>
+
+
+    <!--my authentication-->
+    <string name="my_authentication">My Data</string>
+    <string name="my_authentication_credit_rating_hint">For us to proceed credit assessment</string>
+    <string name="my_authentication_credit_limit_hint">Fill up the info，have chance to get a higher limit</string>
+    <string name="my_authentication_order_hint">Please fill in the certification information in order</string>
+
+    <string name="basic_information">Basic Information</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="employment_information">Employment Information</string>
+    <string name="go_on_certification">Continue Verifying</string>
+    <string name="complete">Completed</string>
+    <string name="go_to_certification">Fill In</string>
+
+    <string name="select_pay_cycle">Select Pay Cycle</string>
+
+    <string name="bank_reserved_phonenumb">Bank Card Phone Number</string>
+
+    <string name="start_authentication">Continue Verifying</string>
+    <string name="lines_assess">Get a limit</string>
+    <string name="finish_news_lines_assess">You have completed all the certification information and you can immediately get your credit quota</string>
+
+
+    <!--lines assess-->
+    <string name="lines_assessing">On Process</string>
+    <string name="lines_assessing_details">we received your loan application,\n please be patient…</string>
+    <string name="lines_assessing_time">Processing Time: 9:00-17:00 Business Hours</string>
+
+    <!--lines assess failure-->
+
+    <!--lines again-->
+    <string name="fail_again_button">Please Re-apply After 7 Days</string>
+    <string name="fail_again_button_title">Failed</string>
+    <string name="fail_again_button_msg">Your application did not approved, please improve your credit score to get your loan</string>
+
+    <string name="lines_assess_refuse_msg">Province Barangay Marital status wrong data</string>
+    <string name="lines_assess_failure">Failed</string>
+    <string name="lines_assess_refuse">Please Re-Submit Information Below</string>
+    <!--lines assess forbid-->
+    <string name="lines_assess_forbid_msg">Sorry, we can\'t process your loan disbursement because your credit record is not good</string>
+    <string name="lines_retrial_msg">Sorry, we are unable to process your loan disbursement due to your bad credit record</string>
+    <string name="lines_assess_unqualified_msg">Sorry, your credit limit is not enough to apply loan</string>
+    <string name="lines_dialog_msg">You can apply for another loan now,please press the “Reapply” button to reapply for the loan.</string>
+
+    <string name="lines_assessing_insufficient">Your submission does not pass verification,please increase your credit score</string>
+    <string name="again_certification">Re-Apply</string>
+
+    <string name="loaned_lines">Since you have not loaned \n for long time, please resubmit \n the  information.</string>
+    <string name="loaned_lines_details">Your loan can be approved \n immediately after data review</string>
+    <string name="resubmit_auth">Confirmed your information</string>
+
+
+    <!--my center-->
+    <!--<string name="myloan">Pinjaman saya</string>-->
+    <string name="bank_card">Bank</string>
+    <string name="active">Aktivitas</string>
+    <!--<string name="setting">Pengaturan</string>-->
+
+
+    <!--@Deprecated    bind bankcard-->
+    <string name="add_bank_card">Tambahkan kartu bank</string>
+    <string name="change_bank_card">Ganti kartu bank</string>
+    <string name="contract_us_content">Silahkan hubungi Customer Service untuk merubah no rekening yang didaftarkan.\nTelp: 021-29880709, \nWA: 089653540347, \nemail: customerservice@mpaidloan.com</string>
+    <!--my setting-->
+
+
+    <!--person data-->
+    <string name="person_data">Data pribadi</string>
+    <string name="person_headimage">Foto</string>
+    <string name="phone_number">Nomor ponsel</string>
+    <string name="id_card_number">Nomor NIK KTP</string>
+    <!--=============================xuyexiang=============================-->
+    <!--登录、注册、忘记密码-->
+    <string name="sms_code">Pic Code</string>
+    <!--登录-->
+    <string name="mobile_numb">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="forget_pwd_wen">Forgot Password?</string>
+    <string name="tips_login">No Account? Sign Up</string>
+    <!--忘记密码-->
+    <string name="verify_code">SMS Code</string>
+    <string name="forget_pwd">Forgot Password</string>
+    <string name="reset_pwd">Password</string>
+    <string name="is_read">I have read and agree to the letter of authorization</string>
+    <!--缺少-->
+    <string name="get">Gain Code</string>
+    <!--注册-->
+    <string name="sign_up">Sign Up</string>
+    <string name="agree_register">Registration means that you agree with the users privacy policy and service agreement</string>
+    <string name="pls_input_right_phone">Please enter right phone</string>
+    <string name="iv_verify_error">Verify is error</string>
+    <!--意向采集-->
+
+    <!--身份认证-->
+    <string name="next">Next Step</string>
+    <string name="submit">Submit</string>
+    <string name="next_step">Next</string>
+    <string name="name">Full Name</string>
+    <string name="name_hint">Isi nama</string>
+    <string name="idcard_numb">SSS NO.</string>
+    <string name="id_commit_msg">Please confirm the ID number and name to avoid affecting the audit results.</string>
+    <string name="id_commit_no">NO</string>
+    <string name="id_commit_yes">YES</string>
+    <string name="jump">“Skip” continue apply</string>
+
+
+    <!--基本信息-->
+    <string name="sex">Gender</string>
+    <string name="birthday">Data of Birth</string>
+    <string name="islands_region">Archipelagos</string>
+    <string name="province">Region</string>
+    <string name="city">City</string>
+    <string name="live_address">Home Address</string>
+    <string name="address_type">Address Type</string>
+    <string name="select_address_type">Select an address type</string>
+    <string name="live_address2">Alamat Kantor</string>
+    <string name="education_msg">Education \nSituation</string>
+    <string name="marital_status">Marital Status</string>
+    <string name="child_amount">Number of Children</string>
+    <string name="pls_chose_sex">Select Gender</string>
+    <string name="quick_audit">Fast Loan</string>
+    <string name="low_rate">Low Rate</string>
+    <string name="select_answer">Select Answer</string>
+    <string name="pls_input_reserved_phonenumb">Isi no hp yang didaftarkan di bank</string>
+
+    <!--启动页-->
+    <string name="skip">Jump</string>
+    <string name="s_skip">s&#160;Jump</string>
+    <!--登录-->
+
+    <string name="pls_chose_birthday">Select the Date of Birth</string>
+    <string name="pls_input_liveaddress">Enter Your Home Address</string>
+    <string name="pls_chose_education">Select Education</string>
+    <string name="pls_input_whatsapp">Enter Whatsapp Account</string>
+    <string name="pls_input_facebook">Enter Facebook Account</string>
+    <string name="pls_input_instagram">Enter Instagram Account</string>
+    <string name="pls_chose_traffic_tool">Select Your Vehicle</string>
+    <string name="pls_chose_traffictool_type">Enter the Brand of Your Vehicle</string>
+
+
+    <string name="bank_numb"> Nomor Rekening</string>
+    <string name="pls_chose_bankcard">Isi nomor rekening</string>
+    <string name="sendcard_bank">Bank Penerbit</string>
+    <string name="pls_chose_bank">Pilih Bank</string>
+    <string name="warm_tips">Reminder</string>
+    <!--社交信息-->
+    <string name="social_inform">Social Information</string>
+    <!--资产信息-->
+    <string name="asset_inform">Asset Information</string>
+    <string name="traffic_tool">Vehicle</string>?
+    <string name="type">Brand</string>
+
+    <string name="license_numb">License Number</string>
+    <string name="update_license_and_person">Upload a selfie with your license</string>
+    <string name="pls_input_licensenumb">Enter Your License number</string>
+    <!--借款还款主界面-->
+    <string name="bank_repay_arrow">Repayment through bank ></string>
+    <string name="recent_repayday">Recently repayment date %1$s</string>
+    <string name="loan_intention">Use of the Loan</string>
+    <!--银行信息-->
+    <string name="bank_inform">Informasi Bank</string>
+    <string name="change_bankinform">Ubah Informasi Bank</string>
+    <!--还款-->
+    <string name="repay">Repayment</string>
+    <string name="see_detail">Details</string>
+    <string name="expire_back">%1$s Jatuh tempo</string>
+    <string name="tips_repay_improvecredit">Limit will be restored once repaid successfully</string>
+    <string name="bank_repay">Repayment through bank</string>
+    <string name="bank_repay_top_msg">Deposit the arrears to the following bank</string>
+    <string name="bank_repay_number">Account No.</string>
+    <string name="bank_repay_name">Account Name</string>
+    <string name="bank_repay_bottom_msg">Provide your transfer/deposit infomation</string>
+    <string name="bank_repay_input_bank_name">Input bank name</string>
+    <string name="bank_repay_branch_name">Branch</string>
+    <string name="bank_repay_input_branch_name">Input the branch name</string>
+    <string name="bank_repay_upload_slip">Upload the transfer/deposit slip</string>
+    <string name="bank_repay_view_example">View example</string>
+    <string name="bank_repay_upload">Upload</string>
+    <string name="bank_repay_modify">Modify</string>
+
+
+    <string name="pls_chose_marital_status">Select Your Marital Status</string>
+    <string name="bank_describe">Jika tidak ada bank tersedia, pilih permutasi untuk menghasilkan VA untuk pembayaran kembali.</string>
+    <string name="find_new_version">Find new version</string>
+    <string name="update_msg">Update </string>
+    <string name="update_now">Update Now</string>
+    <string name="risk_manager">Multidimensional\nRisk Control</string>
+    <string name="pls_input_email">Enter Your Email</string>
+
+    <string name="pls_input_right_email">Enter right email</string>
+    <string name="credit_deposit">Select Your Career</string><!--信用保证金 -->
+    <string name="borrow_amount_interest">Biaya admin: 120.000\nBunga: 2.100</string>
+    <string name="get_amount_interest">Jumlah pencairan: 480.000\nJumlah pengembalian: 602.100</string>
+
+    <string name="audit_title">Insufficient Credit Score</string> <!-- 信用评分不足 -->
+    <string name="audit_sub_title">Pay deposit verification and get a limit of IDR 600,000</string>
+    <string name="audit_btn_content">IDR 300,000 immediately passes</string>
+    <string name="audit_va_code">Lihat Kode VA ></string>
+    <string name="repayment_source">Sumber pelunasan pinjaman</string>
+    <string name="repayment_source_hint">Sebab meminjam</string>
+    <string name="dialog_sure">Sure</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="hint_data_employment">e.g. Company ID/COE</string>
+    <string name="hint_thelatestpay_hint">Hard Copy or Soft Copy</string>
+
+    <string name="alert_splash_message">Sir / Madam, to improve accuracy of credit rating, we will ask you give the following rights in the pop-up window to open all privileges, and with giving this right an opportunity for approval of your loan.</string>
+    <string name="alert_splash_setting">Please go to【Settings】-【Application】-【MMloan】-【Permission】To authorize SMS &amp; Note calls &amp; Locations &amp; Cameras &amp; Read storage、Write storage &amp; Manage permissions &amp; SMS notifications and to continue your submission or update and authorize</string>
+    <string name="refund_result_fail">Please Re-submit Your Request for Refund</string>
+    <string name="img_upload_error">Image upload failed</string>
+    <string name="pls_upload_img">Please upload an image</string>
+
+    <!--额外信息 -聚信立-->
+    <string name="title_extra_credit">Increase Credit Score</string>
+    <string name="title_required_field">Required field</string>
+    <string name="title_facebook">Facebook</string>
+    <string name="title_completed">Completed</string>
+    <string name="title_optional">Optional(Authorized for fast approval)</string>
+    <string name="title_grab">Grab</string>
+    <string name="title_fill_in">Fill In</string>
+    <string name="title_submit">Submit</string>
+    <string name="agreement_main">Welcome and thank you </string>
+    <string name="base_info_phone_tag">Do you own this phone?</string>
+    <string name="using_phone_time">How long have you been using this phone?</string>
+
+    <string name="credit_limit">Credit limit(₱)</string>
+    <string name="borrow_service_fee">Borrowing Service Fee(₱)</string>
+    <string name="repayment_fee">Repayment Fee(₱)</string>
+    <string name="will_receive">You\'ll receive(₱)</string>
+    <string name="withdrawal_fee">Withdrawal Fee(₱)</string>
+    <string name="withdrawal_days">Term of Loan(Day)</string>
+    <string name="pls_choose_product">please Select product</string>
+    <string name="pls_select_agreement">Please agree that we will check the contact information till your loan due date.</string>
+
+
+    <string name="login">Sign In</string>
+    <string name="login_error">Login Error</string>
+    <string name="login_again">Login again</string>
+    <string name="neterror_tryagain">Network connection failed check the network</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="iknow">Sudah tahu</string>
+    <string name="withdraw_code">Withdraw Code</string>
+    <string name="loan_suc_mark">1. The withdraw code will expire within 48 hours, please withdraw your money before the code expires \n2. User should be the one to withdraw in person.</string>
+    <string name="contact_us">— Contact Us：%s —</string>
+    <string name="loan_result">Borrowing Result</string>
+    <string name="withdraw_details">Withdraw Details</string>
+    <string name="back_again">Click exit again</string>
+    <string name="agree_title"><![CDATA[User Data & Personal Information]]></string>
+    <string name="update_gcash">Link GCash account</string>
+    <string name="bind_gcash">Get remittance via GCash</string>
+    <string name="open_sms_permission">Please open the sms permissions</string>
+
+    <string name="hint_payroll">Please ensure all the info you filled is real and correct, to get higher limit. If dont have employer info，click “skip” continue apply</string>
+
+</resources>

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="paymentData"
+            type="com.mmkj.usercenter.model.entity.CurrentPaymentData" />
+
+        <variable
+            name="noRepay"
+            type="boolean" />
+
+        <variable
+            name="isShowCode"
+            type="boolean" />
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_F5F5F5"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:background="@color/white"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp0"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:src="@drawable/back_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/myrepay"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_help"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp0"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:src="@drawable/repay_help"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp0"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:text="@string/finish"
+                android:textColor="@color/blue_398afe"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/ll_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/top">
+
+                    <TextView
+                        android:id="@+id/repay_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:includeFontPadding="false"
+                        android:text="@{noRepay?@string/no_repay_title:@string/should_be_repay_title}"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="@dimen/sp12"
+                        tools:text="Repayment Amount" />
+
+                    <ImageView
+                        android:id="@+id/repay_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/empty_repay"
+                        android:visibility="@{noRepay?View.VISIBLE:View.GONE}" />
+
+                    <TextView
+                        android:id="@+id/repay_amount"
+                        fontPath="fonts/DIN1451.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp12"
+                        android:includeFontPadding="false"
+                        android:text="@{String.valueOf(paymentData.showAmount())}"
+                        android:textSize="@dimen/sp35"
+                        android:visibility="@{noRepay?View.GONE:View.VISIBLE}"
+                        tools:text="1,725" />
+
+                    <TextView
+                        android:id="@+id/repay_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp12"
+                        android:includeFontPadding="false"
+                        android:text="@{@string/last_repay_date_format(paymentData.showRepayDate())}"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="@dimen/sp12"
+                        android:visibility="@{noRepay?View.GONE:View.VISIBLE}"
+                        tools:text="Final Repayment Date：09-08-2019" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_RepayCodeView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp183"
+                        android:layout_margin="@dimen/dp17"
+                        android:background="@drawable/shape_radius7_stroke_efefef"
+                        android:visibility="@{isShowCode?View.VISIBLE:View.GONE}"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/top_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp9"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_repayment_top_line"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/acTv_Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp13"
+                            android:text="Repayment Code"
+                            android:textColor="@color/black_333333"
+                            android:textSize="@dimen/sp12"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/top_line" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/acTv_RepayCode"
+                            fontPath="fonts/TriviaSansRegular-Bold.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp8_5"
+                            android:text="@{paymentData.paymentCode}"
+                            android:textColor="@color/color_global"
+                            android:textSize="@dimen/sp23"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/acTv_Title"
+                            tools:text="8485 586648551" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideLine"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5" />
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="@dimen/dp63"
+                            android:layout_marginStart="@dimen/dp15_5"
+                            android:layout_marginLeft="@dimen/dp15_5"
+                            android:layout_marginTop="@dimen/dp27_5"
+                            android:layout_marginEnd="@dimen/dp6_5"
+                            android:layout_marginRight="@dimen/dp6_5"
+                            android:background="@drawable/shape_radius5_stroke_efefef"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/guideLine"
+                            app:layout_constraintTop_toBottomOf="@id/acTv_RepayCode">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/acTv_PayName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:paddingTop="@dimen/dp10"
+                                android:text="Biller"
+                                android:textColor="@color/gray_999999"
+                                android:textSize="@dimen/sp11"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/acImg_PayIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/acTv_PayName"
+                                tools:src="@drawable/img_skypay" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="@dimen/dp63"
+                            android:layout_marginStart="@dimen/dp6_5"
+                            android:layout_marginLeft="@dimen/dp6_5"
+                            android:layout_marginTop="@dimen/dp27_5"
+                            android:layout_marginEnd="@dimen/dp15_5"
+                            android:layout_marginRight="@dimen/dp15_5"
+                            android:background="@drawable/shape_radius5_stroke_efefef"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintLeft_toRightOf="@id/guideLine"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/acTv_RepayCode">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/acTv_ChannelName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:paddingTop="@dimen/dp10"
+                                android:text="Repayment channel"
+                                android:textColor="@color/gray_999999"
+                                android:textSize="@dimen/sp11"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/acImg_ChannelIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/acTv_ChannelName"
+                                tools:src="@drawable/img_channels_711_12" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_RepayLoadingView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp183"
+                        android:layout_margin="@dimen/dp17"
+                        android:background="@drawable/shape_radius7_stroke_efefef"
+                        android:visibility="@{isShowCode?View.GONE:View.VISIBLE}"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/top_line2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp6_5"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_repayment_top_line"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/acImg_Loding"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp26_5"
+                            android:src="@drawable/img_loading_repaycode"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/top_line2" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            fontPath="fonts/DroidSansFallback.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp22_5"
+                            android:text="Payment Code Processing..."
+                            android:textSize="@dimen/sp14"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/acImg_Loding" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/repayType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:layout_marginBottom="@dimen/dp20"
+                        android:drawableRight="@drawable/repay_look_va"
+                        android:drawablePadding="@dimen/dp3"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="Repayment instructions"
+                        android:textSize="@dimen/sp12"
+                        android:visibility="@{noRepay?View.GONE:View.VISIBLE}" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/acTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?android:actionBarSize"
+                    android:layout_marginLeft="@dimen/dp17"
+                    android:gravity="center_vertical"
+                    android:text="Repayment record"
+                    android:textSize="@dimen/sp15"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_top" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/acTv_Empty"
+                    fontPath="fonts/DroidSansFallback.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp103"
+                    android:text="No repayment record"
+                    android:textSize="@dimen/sp12"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/acTv"
+                    android:background="@android:color/white"
+                    android:layout_gravity="center"
+                    android:gravity="center" />
+
+                <com.mmkj.baselibrary.widget.ScrollRecyclerView
+                    android:id="@+id/rv_repay_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/acTv_Empty" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</layout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:background="@color/bg_F5F5F5">
+
+		<include layout="@layout/include_toolbar" />
+
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dp10"
+			android:orientation="vertical"
+			android:background="@color/white"
+			android:paddingLeft="@dimen/dp16">
+
+			<LinearLayout
+				style="@style/LinearRegisterStyle"
+				android:layout_marginRight="@dimen/dp24">
+
+				<ImageView
+					style="@style/IvRegisterStyle"
+					android:src="@drawable/phone" />
+
+				<com.mmkjflb.mmloan.utils.view.DeleteEditText
+					android:id="@+id/et_changephone"
+					style="@style/EtInputChangePhoneTwoStyle"
+                    android:maxLength="11"
+					android:hint="@string/pls_input_new_phonenumb" />
+
+			</LinearLayout>
+
+			<View style="@style/line_marginleft_16dp" />
+
+			<LinearLayout
+				style="@style/LinearRegisterStyle"
+				android:layout_marginRight="@dimen/dp24">
+
+				<ImageView
+					style="@style/IvRegisterStyle"
+					android:src="@drawable/verification_code" />
+
+				<EditText
+					android:id="@+id/et_imgcode"
+					style="@style/EtInputChangePhoneTwoStyle"
+					android:hint="@string/sms_code"
+					android:maxLength="4" />
+
+				<com.mmkjflb.mmloan.utils.view.VerificationCodeView
+					android:id="@+id/iv_code"
+					android:layout_width="@dimen/dp80"
+					android:layout_height="@dimen/dp32"
+					android:layout_gravity="center_vertical" />
+			</LinearLayout>
+
+			<View style="@style/line_marginleft_16dp" />
+
+			<LinearLayout
+				style="@style/LinearRegisterStyle"
+				android:layout_marginRight="@dimen/dp24">
+
+				<ImageView
+					style="@style/IvRegisterStyle"
+					android:src="@drawable/smscode" />
+
+				<EditText
+					android:id="@+id/et_changephone_code"
+					style="@style/EtInputChangePhoneTwoStyle"
+					android:hint="@string/verify_code"
+                    android:maxLength="6" />
+
+				<TextView
+					android:id="@+id/tv_changephone_sendcode"
+					android:layout_width="@dimen/dp80"
+					android:layout_height="@dimen/dp28"
+					android:background="@drawable/radius25_green_selector"
+					android:enabled="true"
+					android:gravity="center"
+					android:text="@string/get"
+					android:textColor="@color/color_global"
+					android:textSize="12sp" />
+
+			</LinearLayout>
+
+
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/btn_changephone"
+			style="@style/LoginButtonTheme"
+			android:layout_marginTop="@dimen/dp48"
+			android:enabled="false"
+			android:layout_marginLeft="@dimen/dp16"
+			android:layout_marginRight="@dimen/dp16"
+			android:text="@string/confirm" />
+
+	</LinearLayout>
+
+</layout>

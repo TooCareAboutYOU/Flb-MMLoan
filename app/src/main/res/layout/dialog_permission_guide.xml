@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/dp48"
+        android:layout_height="@dimen/dp48"
+        android:scaleType="center"
+        android:src="@drawable/back_black"
+        app:layout_constraintBottom_toTopOf="@+id/nsvPermissionGuide"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvPermissionGuide"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="@dimen/dp0"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoSetting"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBack">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingRight="@dimen/dp20">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                fontPath="fonts/DroidSansFallback.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp60"
+                android:text="You denied the permissions required to continue"
+                android:textColor="@color/black_444444"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp52"
+                android:text="If you would still like to apply for a loan,please go to your phone Settings. Tap MMloan then Permissions(shown below)."
+                android:textColor="@color/black_444444"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPermissionTitle"
+                fontPath="fonts/DroidSansFallback.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp32"
+                android:text="Provide the permissions for Manage calls,Contacts,Location,Camera"
+                android:textColor="@color/black_444444"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp340"
+                android:layout_marginTop="@dimen/dp20"
+                android:scaleType="fitXY"
+                android:src="@drawable/permission_guide" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnGoSetting"
+        style="@style/LoginButtonTheme"
+        android:layout_width="@dimen/dp0"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp22"
+        android:layout_marginRight="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp22"
+        android:text="GO TO SETTINGS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nsvPermissionGuide" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

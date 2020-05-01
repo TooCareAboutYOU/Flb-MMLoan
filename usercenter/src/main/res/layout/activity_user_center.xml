@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="phone"
+            type="String" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp125">
+
+                <ImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bg_certifiate" />
+
+                <ImageView
+                    android:id="@+id/iv_mycenter_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:padding="@dimen/dp16"
+                    android:src="@drawable/delete_center" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_center_head"
+                android:layout_width="@dimen/dp78"
+                android:layout_height="@dimen/dp78"
+                android:layout_marginLeft="@dimen/dp54"
+                android:layout_marginTop="@dimen/_dp38"
+                android:src="@drawable/center_head" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                fontPath="fonts/DIN1451.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp54"
+                android:layout_marginTop="@dimen/dp18"
+                android:text="@{phone}"
+                android:textColor="@color/black_584f60"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_gcash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff584f60"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp54"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tv_myloan"
+                style="@style/TvCenter"
+                android:drawableLeft="@drawable/center_myloan"
+                android:text="@string/myloan" />
+
+            <TextView
+                android:id="@+id/tv_myrepay"
+                style="@style/TvCenter"
+                android:drawableLeft="@drawable/my_repayment"
+                android:text="@string/myrepay" />
+
+            <TextView
+                android:id="@+id/tv_customer_service"
+                style="@style/TvCenter"
+                android:drawableLeft="@drawable/icon_customer_service"
+                android:text="@string/customer_service" />
+
+            <TextView
+                android:id="@+id/tv_credit"
+                style="@style/TvCenter"
+                android:drawableLeft="@drawable/icon_credit_margin"
+                android:text="@string/credit" />
+            <TextView
+                android:id="@+id/tv_setting"
+                style="@style/TvCenter"
+                android:drawableLeft="@drawable/center_setting"
+                android:text="@string/setting" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

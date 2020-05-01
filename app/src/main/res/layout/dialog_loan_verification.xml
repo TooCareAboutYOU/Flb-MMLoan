@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp38"
+        android:layout_marginRight="@dimen/dp38"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        android:paddingTop="@dimen/dp22"
+        android:paddingBottom="@dimen/dp16"
+        android:background="@drawable/radius4_white_shape">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SMS verification"
+            android:textColor="@color/black_333333"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/dp16"
+            android:layout_height="@dimen/dp16"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+            android:src="@drawable/icon_close"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/tvTitleMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To ensure your successful loan, please enter the correct verification code "
+            android:textColor="@color/gray_999999"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/dp20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_333333"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnGetCode"
+            app:layout_constraintBottom_toBottomOf="@+id/btnGetCode"
+            tools:text="123456" />
+
+
+        <TextView
+            android:id="@+id/btnGetCode"
+            android:gravity="center"
+            android:textSize="11sp"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp28"
+            android:background="@drawable/radius3dp_grayffffff_shape"
+            android:enabled="true"
+            android:text="@string/get"
+            android:textColor="@color/black333333_gray999999_color"
+            app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/tvTitleMsg"
+            android:layout_marginTop="@dimen/dp8"
+            />
+
+        <com.mmkj.baselibrary.util.view.VerificationCodeEditText
+            android:id="@+id/vciCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp52"
+            android:layout_margin="@dimen/dp10"
+            android:inputType="number"
+            android:textColor="@color/black_333333"
+            android:textSize="25sp"
+            app:bottomLineHeight="@dimen/dp2"
+            app:bottomLineNormalColor="@color/gravy_BEBEBE"
+            app:bottomLineSelectedColor="@color/black_333333"
+            app:cursorColor="@color/black_333333"
+            app:cursorWidth="@dimen/dp2"
+            app:figures="6"
+            app:selectedBackgroundColor="@android:color/transparent"
+            app:verCodeMargin="@dimen/dp8"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnGetCode"
+            />
+        <TextView
+            android:id="@+id/tvErrorMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verification code error"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vciCode"
+            app:layout_constraintBottom_toTopOf="@id/btnConfirm"
+            android:textSize="12sp"
+            android:textColor="#FF3E3E"
+            android:visibility="invisible"
+            android:layout_marginTop="@dimen/dp6"
+            android:layout_marginBottom="@dimen/dp12"
+            />
+
+        <TextView
+            android:id="@+id/btnConfirm"
+            style="@style/LoginButtonTheme"
+            android:enabled="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/confirm" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

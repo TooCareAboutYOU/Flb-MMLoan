@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.mmkj.baselibrary.util.StringUtils" />
+
+        <import type="com.mmkj.baselibrary.util.PreferenceUtils" />
+
+        <variable
+            name="withdrawNumber"
+            type="com.mmkj.baselibrary.model.entitry.WithdrawalNumberEntity" />
+
+        <variable
+            name="phone"
+            type="String" />
+
+        <variable
+            name="isTIN"
+            type="boolean" />
+
+        <variable
+            name="isLoanResult"
+            type="boolean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_3A3E4F"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp0"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:src="@drawable/back_white"
+                android:visibility="@{isLoanResult?View.GONE:View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{isLoanResult?@string/loan_result:@string/withdraw_details}"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp0"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:text="OK"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="@{isLoanResult?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/dp16">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp26"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:layout_marginRight="@dimen/dp26"
+                    android:layout_marginBottom="@dimen/dp16"
+                    android:background="@drawable/radius6_white_shape"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp16"
+                    android:paddingTop="@dimen/dp24"
+                    android:paddingRight="@dimen/dp16">
+
+                    <TextView
+                        android:id="@+id/tv_result_show"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp20"
+                        android:drawableTop="@drawable/loan_suc"
+                        android:drawablePadding="@dimen/dp12"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="Successful Loan"
+                        android:textColor="@color/black_333333"
+                        android:textSize="15sp"
+                        android:visibility="@{isLoanResult?View.VISIBLE:View.GONE}"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp16"
+                        android:background="@drawable/withdraw_code_bg"
+                        android:paddingTop="@dimen/dp15"
+                        android:paddingBottom="@dimen/dp10"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_result_show">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp8"
+                            android:src="@drawable/loan_point_left"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/tv_withdraw_code"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_withdraw_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/withdraw_code"
+                            android:textColor="@color/gray_666666"
+                            android:textSize="12sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp8"
+                            android:src="@drawable/loan_point_right"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_withdraw_code"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_withdrawcode"
+                            fontPath="fonts/DIN1451Mittelschrift-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp8"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@{withdrawNumber.withdrawalNumber}"
+                            android:textColor="@color/green_32CB53"
+                            android:textSize="30sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_withdraw_code"
+                            tools:text="SK07845499481" />
+
+                        <TextView
+                            android:id="@+id/tv_withdraw_request"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp6"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="Please provide 2 valid IDs and phone \n numbers when withdrawing funds"
+                            android:textColor="@color/gray_999999"
+                            android:textSize="11sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_withdrawcode" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="Withdraw Amount(₱)"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        fontPath="fonts/DIN1451Mittelschrift-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_marginBottom="@dimen/dp14"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@{StringUtils.cutOutLastThree(StringUtils.doubleZheng(withdrawNumber.amount))}"
+                        android:textColor="@color/black_444444"
+                        android:textSize="30sp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp24">
+
+                        <TextView
+                            android:id="@+id/tv_payer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="Payer :"
+                            android:textColor="@color/gray_999999"
+                            android:textSize="11sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_payer_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@{withdrawNumber.sender}"
+                            android:textColor="@color/gray_999999"
+                            android:textSize="11sp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="MMloan" />
+
+                        <TextView
+                            android:id="@+id/tv_sources"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp8"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="Sources of Funds :"
+                            android:textColor="@color/gray_999999"
+                            android:textSize="11sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_payer" />
+
+                        <TextView
+                            android:id="@+id/tv_source_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@{withdrawNumber.source}"
+                            android:textColor="@color/gray_999999"
+                            android:textSize="11sp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tv_sources"
+                            tools:text="EEC PHILS" />
+
+                        <TextView
+                            android:id="@+id/tv_channel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp8"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="Withdraw Channel :"
+                            android:textColor="@color/gray_999999"
+                            android:textSize="11sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_sources" />
+
+                        <TextView
+                            android:id="@+id/tv_channel_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@{withdrawNumber.withdrawChannel}"
+                            android:textColor="@color/gray_999999"
+                            android:textSize="11sp"
+                            android:visibility="@{isTIN?View.GONE:View.VISIBLE}"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tv_channel"
+                            tools:text="EEC PHILS" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_channels"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp12"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_channel" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/btn_viewloan"
+                        style="@style/BtnMainStyle"
+                        android:layout_marginBottom="@dimen/dp16"
+                        android:text="View My Loan"
+                        android:visibility="@{isLoanResult?View.VISIBLE:View.GONE}" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp26"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:layout_marginRight="@dimen/dp26"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="@dimen/dp4"
+                    android:text="@string/loan_suc_mark"
+                    android:textColor="@color/gray_8F95AC"
+                    android:textSize="11sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:gravity="center"
+                    android:text="@{@string/contact_us(phone)}"
+                    android:textColor="@color/gray_8F95AC"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

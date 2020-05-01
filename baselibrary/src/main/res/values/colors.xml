@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#26c5a8</color>
+    <color name="colorPrimaryDark">#26c5a8</color>
+    <color name="colorAccent">@color/color_global</color>
+    <color name="overdue_orange">#ffa541</color>
+    <color name="alpha_8888">#88888888</color>
+    <declare-styleable name="CircularRing">
+        <attr name="roundColor" format="color" />
+        <attr name="roundProgressColor" format="color" />
+        <attr name="circleRoundWidth" format="dimension" />
+        <attr name="circleWidth" format="dimension" />
+        <attr name="circleTextColor" format="color" />
+        <attr name="circleNumber" format="integer" />
+        <attr name="circleTextSize" format="dimension" />
+        <attr name="circleColor1" format="color" />
+        <attr name="circleColor2" format="color" />
+        <attr name="circleColor3" format="color" />
+        <attr name="circleColor4" format="color" />
+        <attr name="circleColor5" format="color" />
+    </declare-styleable>
+    <color name="statusbar_maincolor">#000000</color>
+    <color name="black">#000000</color>
+    <color name="line_horizontal">#e6e6e6</color>
+    <color name="white">#ffffffff</color>
+    <color name="gray_f9fafb">#f9fafb</color>
+    <color name="tv_black">#333333</color>
+    <color name="black_333333">#333333</color>
+    <color name="black_222222">#222222</color>
+    <color name="gray_f4f4f4">#f4f4f4</color>
+    <color name="gray_999999">#999999</color>
+    <color name="gray_c5">#C5C5C5</color>
+    <color name="gray_cacaca">#cacaca</color>
+    <color name="gray_666666">#666666</color>
+    <color name="gray_ededed">#ededed</color>
+    <color name="gray_bbbbbb">#bbbbbb</color>
+    <color name="transparent_black">#b51d1a1a</color>
+    <color name="app_main">#f5f5f9</color>
+    <color name="gray_939393">#939393</color>
+    <color name="gray_bababa">#bababa</color>
+    <color name="blue_398afe">#398afe</color>
+    <color name="gray_adadad">#adadad</color>
+    <color name="gray_d2d4d8">#d2d4d8</color>
+    <color name="gray_9a9a9a">#9a9a9a</color>
+    <color name="gray_F1F1F1">#F1F1F1</color>
+    <color name="black_584f60">#584f60</color>
+    <color name="black_4e5364">#4e5364</color>
+    <color name="gray_e5e5e5">#e5e5e5</color>
+    <color name="black_384f60">#384f60</color>
+    <color name="gray_a4a4a4">#a4a4a4</color>
+    <color name="gray_d1d1d1">#d1d1d1</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_f5f9fb">#f5f9fb</color>
+    <color name="gray_f2f2f2">#f2f2f2</color>
+    <color name="gray_e5e8ea">#e5e8ea</color>
+    <color name="blue_3b9bff">#3b9bff</color>
+    <color name="blue_398DFF">#398DFF</color>
+    <color name="white_BCE8DB">#BCE8DB</color>
+    <color name="gray_9b9b9b">#9b9b9b</color>
+    <color name="orange_fe7e00">#FE7E00</color>
+    <color name="orange_ff8a00">#FF8A00</color>
+    <color name="green_bcead9">#bcead9</color>
+    <color name="yellow_fff284">#fff284</color>
+    <color name="white_15">#26ffffff</color>
+    <color name="white_70">#82ffffff</color>
+    <color name="blue_25344f">#25344f</color>
+    <color name="gray_f0f0f0">#f0f0f0</color>
+    <color name="gray_dde0e8">#dde0e8</color>
+    <color name="blue_4E9AE7">#4E9AE7</color>
+    <color name="bg_F5F5F5">#F5F5F5</color>
+    <color name="orange_F5F5F5">#FF6464</color>
+    <color name="green_32CB53">#32CB53</color>
+    <color name="black_444444">#444444</color>
+    <color name="gray_8F95AC">#8F95AC</color>
+    <color name="gray_3A3E4F">#3A3E4F</color>
+    <color name="gray_F7F6F9">#F7F6F9</color>
+    <color name="black_54585A">#54585A</color>
+    <color name="green_24c789">#2FC4CA</color>
+    <color name="color_global">#2FC4CA</color>
+    <color name="color_start">#2FC4CA</color>
+    <color name="color_middle">#2FC4CA</color>
+    <color name="color_end">#2FC4CA</color>
+    <color name="gravy_BEBEBE">#BEBEBE</color>
+    <color name="green_c3edde">#C3EDDE</color>
+    <color name="improve_progress_title">#b5ffffff</color>
+    <color name="red_ff6565">#ff6565</color>
+    <color name="gray_eb">#ebebeb</color>
+    <color name="gray_f3">#f3f3f3</color>
+    <color name="red_f95355">#f95355</color>
+    <color name="blue_25324e">#25324e</color>
+    <color name="gray_cccccc">#cccccc</color>
+    <color name="black_595959">#595959</color>
+    <color name="gray_95">#959595</color>
+    <color name="gray_c6c6c6">#c6c6c6</color>
+    <color name="gray_e0e0e0">#e0e0e0</color>
+    <color name="transparent_00000000">#00000000</color>
+    <color name="white_half">#98ffffff</color>
+    <color name="black_323642">#323642</color>
+    <color name="gray_d2d2d2">#d2d2d2</color>
+    <color name="gray_555555">#555555</color>
+    <color name="centerColor">#42A7FE</color>
+    <color name="endColor">#ffff6565</color>
+    <color name="startColor">#ffff8256</color>
+    <color name="main_audit_color">#ffb000</color>
+    <color name="vacode_text_color">#ffb000</color>
+    <color name="feed_type_selected">#309BFB</color>
+    <color name="color_EFEFEF">#EFEFEF</color>
+    <color name="color_e5e5e5">#E5E5E5</color>
+    <color name="color_FF931F">#FF931F</color>
+</resources>

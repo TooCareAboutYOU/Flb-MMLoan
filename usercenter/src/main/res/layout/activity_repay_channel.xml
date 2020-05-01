@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/bg_F5F5F5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/top"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp0"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:src="@drawable/back_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_repay_channel"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp0"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:text="@string/finish"
+                android:textColor="@color/blue_398afe"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp10"
+            app:layout_constraintTop_toBottomOf="@id/top"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout style="@style/LinearIdInform">
+
+                <TextView
+                    style="@style/TvIdInformLeft"
+                    android:text="@string/region" />
+
+                <TextView
+                    android:id="@+id/tv_region"
+                    style="@style/TvIdInformRightDrawable"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/pls_chose_island"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <View style="@style/line_marginleft_16dp" />
+
+            <!--省份-->
+            <LinearLayout style="@style/LinearIdInform">
+
+                <TextView
+                    style="@style/TvIdInformLeft"
+                    android:text="@string/province" />
+
+                <TextView
+                    android:id="@+id/tv_province"
+                    style="@style/TvIdInformRightDrawable"
+                    android:hint="@string/pls_chose_province"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <View style="@style/line_marginleft_16dp" />
+
+            <!--城市-->
+            <LinearLayout style="@style/LinearIdInform">
+
+                <TextView
+                    style="@style/TvIdInformLeft"
+                    android:text="@string/city2" />
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    style="@style/TvIdInformRightDrawable"
+                    android:hint="@string/pls_chose_city"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btn_submit"
+                style="@style/ButtonTheme"
+                android:enabled="false"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:text="@string/confirm"
+                android:layout_marginTop="@dimen/dp48" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

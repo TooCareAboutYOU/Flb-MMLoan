@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="showChannelsView"
+            type="boolean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_F5F5F5"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include_title"
+            layout="@layout/include_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/linear_loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_f4f4f4"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/dp16"
+                    android:paddingRight="@dimen/dp18"
+                    android:paddingBottom="@dimen/dp24">
+
+                    <TextView
+                        android:id="@+id/tv_deadline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp46"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black_333333"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="2017/10/11  到期" />
+
+                    <View
+                        style="@style/view_horizontal_style"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_deadline" />
+
+                    <TextView
+                        android:id="@+id/tv_repay1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp6"
+                        android:paddingTop="@dimen/dp18"
+                        android:paddingBottom="@dimen/dp10"
+                        android:text="@string/current_balance"
+                        android:textColor="@color/gray_939393"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_deadline" />
+
+                    <TextView
+                        android:id="@+id/tv_repay_amount"
+                        fontPath="fonts/DIN1451.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="@color/black_222222"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_repay1" />
+
+
+                    <TextView
+                        android:id="@+id/tv_repay_detail"
+                        style="@style/Widget.AppCompat.Button"
+                        android:layout_width="@dimen/dp60"
+                        android:layout_height="@dimen/dp26"
+                        android:background="@drawable/width_adadad_shape"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:text="@string/see_detail"
+                        android:textColor="@color/gray_939393"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_repay_amount"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_repay_amount" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <include
+                    android:id="@+id/include_repay_channels"
+                    layout="@layout/include_repayment_channels"
+                    android:visibility="@{showChannelsView ? View.VISIBLE:View.GONE}" />
+
+                <include
+                    android:id="@+id/include_type_1"
+                    layout="@layout/include_repayment_code"
+                    android:visibility="@{!showChannelsView ? View.VISIBLE:View.GONE}" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/btn_repay_rightnow"
+            style="@style/LoginButtonTheme"
+            android:enabled="false"
+            android:text="@string/repay_rightnow" />
+
+    </LinearLayout>
+</layout>

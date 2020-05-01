@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<dimen name="mis_dp_1">2.8444dp</dimen>
+	<dimen name="mis_dp_2">5.6889dp</dimen>
+	<dimen name="mis_dp_20">56.8889dp</dimen>
+	<dimen name="mis_dp_16">45.5111dp</dimen>
+	<dimen name="mis_dp_10">28.4444dp</dimen>
+	<dimen name="mis_dp_5">14.2222dp</dimen>
+	<dimen name="mis_dp_5_5">15.6444dp</dimen>
+	<dimen name="mis_dp_120">341.3333dp</dimen>
+	<dimen name="mis_dp_72">204.8000dp</dimen>
+</resources>

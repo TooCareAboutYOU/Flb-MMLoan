@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_F5F5F5">
+
+        <include layout="@layout/include_toolbar" />
+
+        <LinearLayout
+            android:id="@+id/linear_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16">
+
+            <LinearLayout
+                android:id="@+id/linear_unbindcard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp138_67"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/radius4_white_shape"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp12"
+                    android:drawableTop="@drawable/add"
+                    android:paddingBottom="@dimen/dp6"
+                    android:text="@string/add_bank_card" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_bindcard_suc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp138_67"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/radius4_white_shape"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_bankcard_icon"
+                    android:layout_width="@dimen/dp46"
+                    android:layout_height="@dimen/dp46"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:src="@drawable/default_card"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_bankname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:text="----"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17sp"
+                    app:layout_constraintLeft_toRightOf="@+id/iv_bankcard_icon"
+                    app:layout_constraintTop_toTopOf="@+id/iv_bankcard_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:text="--"
+                    android:textColor="@color/gray_bababa"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_bankcard_icon"
+                    app:layout_constraintLeft_toRightOf="@+id/iv_bankcard_icon"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_banknumb"
+                    fontPath="fonts/DIN1451.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp34"
+                    android:layout_marginRight="@dimen/dp24"
+                    android:text="**** **** **** ****"
+                    android:textColor="@color/black_333333"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/btn_change_bankcard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/radius4_white_shape"
+                android:drawableRight="@drawable/next"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:text="@string/change_bank_card"
+                android:textColor="@color/black_333333"
+                android:textSize="14sp"
+                android:visibility="visible"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_contract_us_content"
+                    android:layout_marginBottom="@dimen/dp14"
+                    android:textSize="@dimen/sp11"
+                    android:lineSpacingExtra="@dimen/dp7"
+                    android:textColor="@color/gray_999999"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contract_us_content"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

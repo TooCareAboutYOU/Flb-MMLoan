@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/dp17">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_radius7_stroke_efefef"
+            android:paddingBottom="@dimen/dp16_5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/top_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp6_5"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_repayment_top_line"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acTv_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp16"
+                android:text="Repayment Code"
+                android:textColor="@color/black_333333"
+                android:textSize="@dimen/sp12"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/top_line" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acTv_RepayCode"
+                fontPath="fonts/TriviaSansRegular-Bold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                tools:text="8485 586648551"
+                android:textColor="@color/color_global"
+                android:textSize="@dimen/sp23"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/acTv_Title" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="@dimen/dp295_5"
+                android:layout_height="@dimen/dp63"
+                android:background="@drawable/shape_radius5_stroke_efefef"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/acTv_RepayCode">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/acTv_PayName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="@dimen/dp10"
+                    android:text="Biller"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="@dimen/sp11"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/acImg_PayIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:src="@drawable/img_skypay"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/acTv_PayName" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/avTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp24_5"
+            android:text="Repayment channel"
+            android:textColor="@color/black_333333"
+            android:textSize="@dimen/sp15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/acTv_ReplaceChannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/icon_replace"
+            android:drawableRight="@drawable/icon_replace"
+            android:gravity="center_vertical"
+            android:text="Replace\t"
+            android:textColor="@color/gray_999999"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintBottom_toBottomOf="@+id/avTv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/avTv" />
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16_5"
+            android:background="@drawable/shape_radius5_stroke_efefef"
+            android:paddingTop="@dimen/dp15"
+            android:paddingBottom="@dimen/dp15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avTv">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/acImg_ChannelIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                tools:src="@drawable/img_channels_711_12" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/acTv_ChangeTimes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp10"
+            android:textColor="@color/color_FF931F"
+            tools:text="After the 7-11 repayment is successful, please wait for  processing. If there is any issue, please contact customer service: (02) 7532306"
+            android:textSize="@dimen/sp11"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/rl"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:padding="@dimen/dp32">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius4_white_shape"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp16"
+            android:paddingBottom="@dimen/dp30">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/pls_chose_idcard_type"
+                    android:textColor="@color/black_333333"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/dp18"
+                    android:paddingRight="@dimen/dp18"
+                    android:src="@drawable/dialog_close_gray" />
+            </RelativeLayout>
+            <RadioGroup
+                android:id="@+id/rg_idtype"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp30"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/tv_idcard_type1"
+                    style="@style/TvIdcardTypeStyle"
+                    android:text="@string/idcard_type1" />
+
+                <RadioButton
+                    android:id="@+id/tv_idcard_type2"
+                    style="@style/TvIdcardTypeStyle"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:text="@string/idcard_type2" />
+
+                <RadioButton
+                    android:id="@+id/tv_idcard_type3"
+                    style="@style/TvIdcardTypeStyle"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:text="@string/idcard_type3" />
+
+                <RadioButton
+                    android:id="@+id/tv_idcard_type4"
+                    style="@style/TvIdcardTypeStyle"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:text="@string/idcard_type4" />
+
+                <RadioButton
+                    android:id="@+id/tv_idcard_type5"
+                    style="@style/TvIdcardTypeStyle"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:text="@string/idcard_type5" />
+                <RadioButton
+                    android:id="@+id/tv_idcard_type6"
+                    style="@style/TvIdcardTypeStyle"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:text="@string/idcard_type6" />
+                <RadioButton
+                    android:id="@+id/tv_idcard_type7"
+                    style="@style/TvIdcardTypeStyle"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:text="@string/idcard_type7" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

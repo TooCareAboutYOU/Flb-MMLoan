@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mmkj.usercenter">
+
+    <application>
+        <activity
+            android:name="com.mmkj.usercenter.viewmodel.usercenter.UserCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mmkj.usercenter.viewmodel.setting.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mmkj.usercenter.viewmodel.reypaylist.RepayListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mmkj.usercenter.viewmodel.repaydetail.RepayDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mmkj.usercenter.viewmodel.loanlist.LoanListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mmkj.usercenter.viewmodel.RepayResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mmkj.usercenter.viewmodel.repaytype.RepayChannelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mmkj.usercenter.viewmodel.repaytype.RepayChannelResultActivity"
+            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name="com.mmkj.usercenter.viewmodel.configip.ConfigIpActivity"-->
+<!--            android:screenOrientation="portrait" />-->
+        <activity
+            android:name="com.mmkj.usercenter.viewmodel.service.CustomerServiceActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mmkj.usercenter.viewmodel.creditguarantee.CreditGuaranteeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mmkj.usercenter.viewmodel.repaymentchannel.RepaymentChannelActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

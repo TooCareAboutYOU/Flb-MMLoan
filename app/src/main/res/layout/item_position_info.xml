@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:descendantFocusability="blocksDescendants">
+
+    <data>
+
+        <variable
+            name="select"
+            type="boolean" />
+
+        <variable
+            name="name"
+            type="String" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="@dimen/dp50real"
+        android:layout_width="match_parent">
+
+        <CheckBox
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="@dimen/dp17"
+            android:layout_marginLeft="@dimen/dp17"
+            android:button="@null"
+            android:textSize="@dimen/sp14"
+            android:textColor="@drawable/position_cb_text"
+            android:checked="@{select}"
+            android:background="@android:color/transparent"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:id="@+id/checkbox"
+            android:text="@{name}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

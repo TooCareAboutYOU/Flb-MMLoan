@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="@dimen/dp24"
+	android:background="@android:color/transparent">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingTop="@dimen/dp24"
+		android:background="@drawable/radius4_white_shape">
+
+		<TextView
+			android:id="@+id/tv_refund_deposit_instructions"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			tools:text="退保证金说明"
+			android:text="Deposit Refund Details"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			android:textColor="@color/black"
+			android:textSize="16sp" />
+
+		<ImageView
+			android:id="@+id/iv_repaydetail_dismiss"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/dialog_close_gray"
+			app:layout_constraintTop_toTopOf="@+id/tv_refund_deposit_instructions"
+			app:layout_constraintBottom_toBottomOf="@+id/tv_refund_deposit_instructions"
+			app:layout_constraintRight_toRightOf="parent"
+			android:paddingRight="@dimen/dp22"
+			android:paddingLeft="@dimen/dp10"/>
+
+		<TextView
+			android:id="@+id/tv_the_actual_amount_paid"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			tools:text="实际缴纳金额(₱)"
+			android:text="Actual Payment Amount(₱)"
+			android:textColor="@color/black"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/tv_refund_deposit_instructions"
+			android:paddingLeft="@dimen/dp22"
+			android:textSize="14sp"
+			android:layout_marginTop="@dimen/dp24" />
+
+		<TextView
+			android:id="@+id/tv_the_actual_amount_paid_value"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="@id/tv_the_actual_amount_paid"
+			app:layout_constraintBottom_toBottomOf="@id/tv_the_actual_amount_paid"
+			android:textColor="@color/black"
+			android:paddingRight="@dimen/dp22"
+			android:textSize="14sp"
+			tools:text="2500.00" />
+
+		<TextView
+			android:id="@+id/tv_pay_the_deposit_fee"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			tools:text="缴纳保证金手续费(₱)"
+			android:text="Deposit Service Fee(₱)"
+			android:textColor="@color/black"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tv_the_actual_amount_paid"
+			android:paddingLeft="@dimen/dp22"
+			android:textSize="14sp"
+			android:layout_marginTop="@dimen/dp24" />
+
+		<TextView
+			android:id="@+id/tv_pay_the_deposit_fee_value"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="@+id/tv_pay_the_deposit_fee"
+			app:layout_constraintBottom_toBottomOf="@id/tv_pay_the_deposit_fee"
+			android:textColor="@color/black"
+			android:paddingRight="@dimen/dp22"
+			android:textSize="14sp"
+			tools:text="140.00" />
+
+
+		<TextView
+            android:id="@+id/tv_refund_fee"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            tools:text="退手续费(₱)"
+			android:text="Refund Service Fee(₱)"
+			android:textColor="@color/black"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tv_pay_the_deposit_fee"
+			android:paddingLeft="@dimen/dp22"
+			android:textSize="14sp"
+			android:layout_marginTop="@dimen/dp24" />
+
+		<TextView
+            android:id="@+id/tv_refund_fee_value"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_refund_fee"
+            app:layout_constraintBottom_toBottomOf="@id/tv_refund_fee"
+            android:textColor="@color/black"
+			android:paddingRight="@dimen/dp22"
+			android:textSize="14sp"
+			tools:text="25.20" />
+
+
+		<View
+			android:id="@+id/view_line"
+			style="@style/view_horizontal_style"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			android:layout_marginTop="@dimen/dp20"
+			app:layout_constraintTop_toBottomOf="@+id/tv_refund_fee_value" />
+
+		<TextView
+            android:layout_width="wrap_content"
+			android:layout_height="@dimen/dp48"
+			tools:text="实际退还金额(₱)"
+			android:text="Actual Refund Amount(₱)"
+			android:gravity="center_vertical"
+			android:textColor="@color/black"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/view_line"
+			android:paddingLeft="@dimen/dp22"
+			android:textSize="14sp"/>
+
+		<TextView
+			android:id="@+id/tv_the_actual_refund_amount"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/dp48"
+			android:gravity="center_vertical"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/view_line"
+			android:textColor="@color/black"
+			android:textSize="14sp"
+			android:paddingRight="@dimen/dp22"
+			tools:text="2334.80" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <data>
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="@dimen/dp180"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp6"
+            android:layout_marginRight="@dimen/dp6"
+            android:background="@drawable/radius4_grayf2f2f2_shape">
+
+            <ImageView
+                android:id="@+id/iv_item_idcertificate"
+                android:layout_width="@dimen/dp166"
+                android:layout_height="@dimen/dp0"
+                android:scaleType="fitXY"
+                android:src="@drawable/upload_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="16:9"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_item_idcertificate_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_333333"
+            android:textSize="11sp"
+            android:layout_margin="@dimen/dp10"
+            android:gravity="center"
+            android:text="@string/upload_person" />
+
+    </LinearLayout>
+</layout>

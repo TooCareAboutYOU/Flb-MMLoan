@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dp32"
+    android:paddingRight="@dimen/dp26">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPermissionTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        fontPath="fonts/DroidSansFallback.ttf"
+        android:text="Manage Calls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_444444"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPermission"
+        app:layout_constraintLeft_toRightOf="@+id/tvPermissionMsg"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/permission_call"
+        android:layout_width="@dimen/dp62"
+        android:layout_height="@dimen/dp60"
+        android:scaleType="fitXY" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPermissionMsg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/ivPermission"
+        app:layout_constraintTop_toBottomOf="@+id/tvPermissionTitle"
+        android:text="Used to securely link your account to your device.We will never send or receive calls form your device"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp14"
+        android:layout_marginRight="@dimen/dp20"
+        android:textColor="@color/black_444444"
+        android:textSize="14sp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

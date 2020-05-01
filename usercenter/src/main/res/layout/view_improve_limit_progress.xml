@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:src="@drawable/improve_limit_degree0" />
+
+    <TextView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/tv1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dp82"
+        android:includeFontPadding="false"
+        app:layout_constraintLeft_toRightOf="@id/iv"
+        android:textSize="@dimen/sp15"
+        android:text="@string/improve_limit_progress_title"
+        android:textColor="@color/improve_progress_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:gravity="center"
+        fontPath="fonts/DIN1451.ttf"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        android:layout_marginTop="@dimen/dp12"
+        android:includeFontPadding="false"
+        android:id="@+id/tv2"
+        android:text=""
+        android:textSize="@dimen/sp44"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</merge>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius6_white_shape">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/acTvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp27"
+        android:text="Example"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clImg"
+            android:layout_width="@dimen/dp220"
+            android:layout_height="@dimen/dp218"
+            android:layout_marginTop="@dimen/dp14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/acTvTitle"
+            android:padding="@dimen/dp1"
+            android:background="@drawable/radius1_gray_shape">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/acIvImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="@dimen/dp16"
+                android:paddingVertical="@dimen/dp1"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_front"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="o" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/acTvHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp20"
+        android:textColor="@color/gray_666666"
+        android:textSize="@dimen/sp13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clImg"
+        tools:text="Take a picture, hold the ID in your hand, place it under your face, and make sure the photo and text on the ID are clear and show all four corners." />
+
+    <View
+        android:id="@+id/lineView"
+        style="@style/view_horizontal_style"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/acTvHint" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/AcTvConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:gravity="center"
+        android:text="Confirm"
+        android:textColor="@color/color_global"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lineView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

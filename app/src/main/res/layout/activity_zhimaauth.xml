@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<data>
+
+		<import type="android.view.View" />
+	</data>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/white">
+
+		<include
+			android:id="@+id/commoninclude_toolbar"
+			layout="@layout/include_toolbar" />
+
+		<View style="@style/ViewStyle.Title" />
+
+		<WebView
+			android:id="@+id/webview_zhima"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:overScrollMode="never" />
+	</LinearLayout>
+</layout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/bg_F5F5F5">
+
+		<include layout="@layout/include_toolbar" />
+
+		<TextView
+			android:id="@+id/tv_changepassword"
+			style="@style/TvSetting"
+			android:text="@string/change_password"
+			android:layout_marginTop="@dimen/dp10" />
+
+		<View style="@style/line_marginleft_16dp" />
+
+		<TextView
+			android:id="@+id/tv_changephone"
+			style="@style/TvSetting"
+			android:text="@string/change_phone" />
+
+
+		<View style="@style/line_marginleft_16dp" />
+		<TextView
+			android:layout_marginTop="@dimen/dp10"
+			android:id="@+id/tv_aboutus"
+			style="@style/TvSetting"
+			android:text="@string/about_we" />
+
+		<View style="@style/line_marginleft_16dp" />
+		<TextView
+			android:id="@+id/tv_feedback"
+			style="@style/TvSetting"
+			android:text="@string/feedback" />
+
+		<TextView
+			android:id="@+id/tv_loginout"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dp50"
+			android:text="@string/exit_current_account"
+			android:gravity="center"
+			android:layout_marginTop="@dimen/dp10"
+			android:textColor="@color/color_global"
+			android:background="@color/white" />
+	</LinearLayout>
+</layout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_day1"
+            style="@style/LinearIdInform"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/pay_cycle_day1" />
+
+            <TextView
+                android:id="@+id/tv_day1"
+                style="@style/TvIdInformRightDrawable"
+                android:hint="@string/pay_cycle_hint_day1"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_day2"
+            style="@style/LinearIdInform"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/pay_cycle_day2" />
+
+            <TextView
+                android:id="@+id/tv_day2"
+                style="@style/TvIdInformRightDrawable"
+                android:hint="@string/pay_cycle_hint_day2"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_day3"
+            style="@style/LinearIdInform"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/pay_cycle_day3" />
+
+            <TextView
+                android:id="@+id/tv_day3"
+                style="@style/TvIdInformRightDrawable"
+                android:hint="@string/pay_cycle_hint_day3"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_day4"
+            style="@style/LinearIdInform"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/pay_cycle_day4" />
+
+            <TextView
+                android:id="@+id/tv_day4"
+                style="@style/TvIdInformRightDrawable"
+                android:hint="@string/pay_cycle_hint_day4"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+    </LinearLayout>
+</layout>

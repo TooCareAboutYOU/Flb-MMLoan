@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.mmkj.baselibrary.util.StringUtils" />
+
+        <variable
+            name="data"
+            type="com.mmkj.usercenter.model.entity.CashDepositInfoEntity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp32"
+        android:background="@drawable/shape_radius6_solid_ff2fc4ca"
+        android:paddingStart="@dimen/dp19"
+        android:paddingLeft="@dimen/dp19"
+        android:paddingEnd="@dimen/dp19"
+        android:paddingRight="@dimen/dp19">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/acTv_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp17"
+            android:gravity="center_horizontal"
+            android:text="Congratulations on \n increasing limit"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/acIv_Close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete_center"
+            app:layout_constraintBottom_toBottomOf="@id/acTv_Title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/acTv_Title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/acTv_Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp12_5"
+            android:alpha="0.58"
+            android:drawableStart="@drawable/loan_point_left"
+            android:drawableLeft="@drawable/loan_point_left"
+            android:drawableEnd="@drawable/loan_point_right"
+            android:drawableRight="@drawable/loan_point_right"
+            android:text="\tThe limit can be increased to \t"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sp12"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/acTv_Title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/acTv_Account"
+            fontPath="fonts/DIN1451.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{StringUtils.cutOutLastThree(StringUtils.doubleZheng(data.getAmount().doubleValue()))}"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/acTv_Subtitle"
+            tools:text="1,800" />
+
+        <RelativeLayout
+            android:id="@+id/cl_Fee_Group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp15_5"
+            android:background="@drawable/shape_radius_6_26ffffff"
+            android:orientation="vertical"
+            android:padding="@dimen/dp10"
+            app:layout_constraintBottom_toTopOf="@+id/acTv_Hint"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/acTv_Account">
+
+            <include
+                android:id="@+id/include_InfoView"
+                layout="@layout/item_dialog_cash_deposit_info_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:data="@{data}" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/acTv_Hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp17_5"
+            android:layout_marginBottom="@dimen/dp17"
+            android:text="Tip: After you confirm the limit increase, we will review your credit score"
+            android:textColor="#9Cffffff"
+            android:textSize="@dimen/sp11"
+            app:layout_constraintTop_toBottomOf="@+id/cl_Fee_Group" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/acTv_Confirm_Limit_Increase"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp43"
+            android:layout_marginTop="@dimen/dp17"
+            android:layout_marginBottom="@dimen/dp27"
+            android:background="@drawable/radius6_white_shape"
+            android:gravity="center"
+            android:text="Confirm the limit increase"
+            android:textColor="@color/color_global"
+            android:textSize="@dimen/sp15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/acTv_Hint" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

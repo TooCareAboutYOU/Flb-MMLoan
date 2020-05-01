@@ -1,0 +1,243 @@
+<resources>
+    <string name="app_name">MMloan</string>
+    <string name="myloan">My Loan</string>
+    <string name="myrepay">My Repayment</string>
+    <string name="credit_guarantee">My Credit Limit</string>
+    <string name="customer_service">Customer Service</string>
+    <string name="setting">Setting</string>
+    <string name="credit">My Credit Limit</string>
+    <string name="change_password">Change the Password</string>
+
+    <string name="about_we">About Us</string>
+    <string name="feedback">Feedback</string>
+    <string name="exit_current_account">Exit the Current Account</string>
+    <string name="change_phone">Modify Phone Number</string>
+    <string name="should_be_repay_title">Repayment Amount</string>
+    <string name="no_repay_title">No Repayment Bills</string>
+    <string name="last_repay_date_format">Final Repayment Date: %s</string>
+    <string name="repay_code">— Repayment Code —</string>
+    <string name="view_reapay_channel">View Repayment Channels</string>
+    <string name="repay_date_format">Repayment Time : %s</string>
+    <string name="biller_type">Biller: %s</string>
+    <string name="repay_success">Successful Repayment</string>
+    <string name="loan_billno">Order Number</string>
+    <string name="loan_amount_real">Loan Amount(₱)</string>
+    <string name="loan_server_money">Borrowing Service Fee(₱)</string>
+    <string name="loan_fee">Withdrawal Fee(₱)</string>
+    <string name="loan_date">Borrowing Time</string>
+
+    <string name="accept_fail">Processing failure</string>
+    <string name="plz_repay_again">Please re-submit the repayment request</string>
+    <!--my borrow -->
+    <string name="my_borrow">My Loan</string>
+    <string name="not_return_borrow">Current Loan</string>
+    <string name="history_borrow">Loan History</string>
+    <string name="borrow">Loan</string>
+    <string name="return_borrow">Repayment</string>
+    <string name="borrow_month">Month</string>
+    <string name="borrow_year">Year</string>
+    <string name="borrow_money">Borrowing Amount (₱)</string>
+    <string name="without">None</string>
+    <string name="accept_success">Successful processing</string>
+    <string name="apply_now">Apply Now</string>
+
+    <string name="loan_deadline">Term of Loan(Day)</string>
+    <string name="order_no">Order Number</string>
+    <string name="region">Archipelagos</string>
+    <string name="province">Region</string>
+    <string name="city2">City/Municipality</string>
+    <string name="select_repay_channel">Check Repayment Channel</string>
+<!--    Repayment instructions-->
+<!--    Repayment channel-->
+    <string name="repayment_channel">Repayment instructions</string>
+    <string name="repay_channel_title">The query results</string>
+    <string name="repay_channel1">7-ELEVEN</string>
+    <string name="repay_channel2">Other Accounts</string>
+    <string name="repay_detail">Repayment Details</string>
+    <string name="pls_input_new_phonenumb">New Phone Number</string>
+    <string name="change_bind_phonenumb">Modify Phone Number</string>
+    <string name="pls_input_diff_phone">Please enter a different phone number</string>
+    <string name="pls_input_old_idcard">Reserved ID Number</string>
+    <string name="pls_input_name">Name</string>
+    <string name="pls_input_old_phone">Original Phone Number</string>
+    <!--feedback-->
+    <string name="pls_input_demand_or_advice">Please write down your needs and suggestions</string>
+    <string name="contacts_way">Contact Information</string>
+    <string name="pls_input_phone_or_email">Please fill in your mobile phone number or email address</string>
+    <!--change password-->
+    <string name="old_password">The old password</string>
+    <string name="pls_input_old_password">Please enter the old password</string>
+    <string name="new_password">The new password</string>
+    <string name="confirm_pwd">Confirm Password</string>
+    <string name="pls_input_new_pd_again">Please enter a new password \nagain</string>
+    <string name="pls_input_new_pd">The new password</string>
+    <string name="confirm_modification">Confirm</string>
+
+
+    <!--about we-->
+    <string name="current_version">Current version:</string>
+    <!--使用双引号将单引号的字符串资源括起来-->
+    <string name="about_we_synopsis_one">&#8195;&#8195;"Second Pay Financing Inc. is an online credit platform which aims to fulfill the financial demand of Filipinos. Our company obtained the  financial license from SEC of the Philippines on 24th of May,2019 ,it showing that we were qualified to offer a loan.Because of the fast development of the mobile market in the Philippines, we have developed and launched "MM loan". Our team has rich experience in the financial and technology industry, and we have always believed that technology can improve everyone's lives. Therefore we have used technology and launched an application to satisfy the demands of consumer finance and micro credit demand. Our mission is to ensure access to financial services for users so every one can have a better life."</string>
+    <string name="about_we_synopsis_two">&#8195;&#8195;MMloan has vast experience in the fintech industry, therefore we have an advanced system to analyze data, and we have built a strong risk control model. Users can get loan approval automatically, we have considered tens of thousands of risk factors into our system. Users can finish the verification process in a short amount of time, and conveniently fulfil your financial needs.</string>
+    <!--&#160;&#160;&#160;&#160;&#160;&#160;&#160;-->
+    <string name="login_out">Are you sure you want to log out?</string>
+
+    <string name="pls_chose_island">Select the Archipelagos</string>
+    <string name="pls_chose_child_amount">Select the Number of Children</string>
+    <string name="pls_chose_other_phone">Backup PhoneNo.</string>
+    <string name="pls_chose_other_phone_amount">Input cellphone No.(optional)</string>
+    <string name="pls_chose_other_phone_hint">The moblie numbers should not be the same as registered phone numbers</string>
+    <string name="pls_choose_nature">Select the Nature</string>
+    <string name="pls_chose_province">Select Region</string>
+    <string name="pls_chose_city">Select the City</string>
+    <string name="pls_chose_address_type">Select an address type</string>
+
+    <!--许叶祥-->
+    <string name="id_card_information">Identity Information</string>
+    <string name="idcard_type">Type of ID</string>
+    <string name="pls_chose_idcard_type">Select the ID type</string>
+    <string name="idcertificate_top">Upload a photo of the front of your ID\nand a selfie of yourself holding your ID</string>
+    <string name="upload_face">Click to upload a photo of\nthe front of your ID</string>
+    <string name="upload_person">Click to upload a selfie of\nyourself holding your ID</string>
+    <string name="name_all">Full Name</string>
+    <string name="pls_input_allname">Full Name</string>
+    <string name="idcard_number">ID Number</string>
+    <string name="pls_input_idcardnumb">ID Number</string>
+    <string name="submit">Submit</string>
+    <string name="i_want_loan">Borrow Loan</string>
+    <string name="repay_regain_credit">After repayment on time, the available amount will be restored in time.</string>
+    <string name="loansuc_gocash">Loan Approved！\nYou can withdrawal your cash now.</string>
+    <string name="i_want_repay">Repayment</string>
+    <string name="recent_norepay">No Repayment Recently</string>
+    <string name="bank_detailing">Bank processing</string>
+    <string name="hint_if_you">If you do not repay this loan by the final due date,you will be charged an additional 10%fee.</string>
+    <string name="hint_auth">Please read the above description of the interest and click \"Continue Verifying\" to indicate that you have read and agreed.</string>
+    <string name="hint_description">Please read the above description of the interest and click \“Borrowing Immediately\" to indicate that you have read and agreed.</string>
+    <string name="loan_rightnow">Borrowing Immediately</string>
+    <string name="repay_rightnow">Repayment</string>
+    <string name="withdraw_request">Please provide 2 valid IDs and phone numbers when withdrawing funds</string>
+    <string name="payer">Payer</string>
+    <string name="remittance_source">Sources of Funds</string>
+    <string name="check_withdraw_code">View My Loan</string>
+    <string name="loan">Loan</string>
+    <string name="withdraw_channel">Withdrawal Channel</string>
+    <string name="pls_chose_withdraw_channel">Select A Withdrawal Channel</string>
+    <string name="loan_result">Borrowing Result</string>
+    <string name="repay_result">Repayment Result</string>
+    <string name="finish">OK</string>
+    <string name="loan_deal">Processing</string>
+    <string name="deal_time">Processing time: 8:00–17:00</string>
+    <string name="loan_fail">Failed</string>
+    <string name="loan_again">Please Apply again</string>
+    <string name="confirm">Confirm</string>
+    <string name="confirm_increase">Confirm to Increase Limit</string>
+
+    <string name="loan_suc">Successful Loan</string>
+    <string name="open_camera_file_permission">Please open the photo and file read and write permissions</string>
+    <string name="idcard_type1">SSS Card</string>
+    <string name="idcard_type2">UMID</string>
+    <string name="idcard_type3">TIN</string>
+    <string name="idcard_type4">Passport</string>
+    <string name="idcard_type5">Driver License</string>
+    <string name="idcard_type6">Poster ID</string>
+    <string name="idcard_type7">Voters</string>
+    <string name="withdrawcode_expired">Withdraw code has expired</string>
+    <string name="recognise_error">Id card recognition failed</string>
+    <string name="repay_date">Repayment Time</string>
+
+
+    <string name="service_fee">Service Fee (₱)</string>
+    <string name="withdraw_fee">Withdraw Fee (₱)</string>
+    <string name="repay_fee">Repayment Fee (₱)</string>
+    <string name="loan_interest">Borrowing Interest (₱)</string>
+    <string name="loan_amount_yuan">Loan Amount (₱)</string>
+    <string name="loan_amount">Loan Amount (₱)</string>
+    <string name="look_repay_code">Check the Repayment Code</string>
+    <!--许叶祥-->
+    <string name="day">day</string>
+    <string name="loan_inverest_yuan">Borrowing Interest(₱)</string>
+    <string name="withdraw_fee_yuan">Withdrawal Fee(₱)</string>
+    <string name="loan_rate_yuan">Borrowing Service Fee (₱)</string>
+    <string name="repay_fee_yuan">Repayment Fee(₱)</string>
+    <string name="repay_rate">Repayment date</string>
+    <string name="actual_to_account_yuan">Actual arrival account(₱)</string>
+    <string name="corpus">The Principal(₱)</string>
+    <string name="interest">Loan Interest(₱)</string>
+    <string name="repay_all">Total Repayment(₱)</string>
+    <string name="overdue_penalty">Overdue Fine(₱)</string>
+    <string name="repaid">Repaid(₱)</string>
+
+    <string name="current_balance">The Amount Due in This Period(₱)</string>
+    <string name="my_credit_line">My Credit Limit(₱)</string>
+    <string name="withdraw_amount_yuan">Withdraw Amount(₱)</string>
+    <string name="available_credit">Available Limit(₱)</string>
+
+    <string name="yuan">₱</string>
+    <string name="data_upload_fail">Data upload failed</string>
+    <string name="signature_fail">Signature acquisition failed</string>
+    <string name="face_recognise_fail">Face recognition failed</string>
+
+    <string name="loan_success">Successful loan</string>
+    <string name="loan_detail">Withdraw details</string>
+
+    <string name="overdue_day">You are currently late for %1$d days</string>
+    <string name="loan_deadline_day">Term of Loan(D)</string>
+    <string name="surname">Last Name</string>
+    <string name="given_name">First Name</string>
+    <string name="middle_name">Middle Name</string>
+
+    <string name="loan_suc_mark">1. The withdraw code will expire within 48 hours, please withdraw your money before the code expires \n2. User should be the one to withdraw in person \n3. When withdrawing the fund, please state that it is an international transfer from Hongkong</string>
+
+    <string name="improve_limit_title">Privileges</string>
+    <string name="return_deposit">Deposit Refund</string>
+    <string name="return_deposit_info">Refund Rules</string>
+    <string name="cant_improve_limit">You have already paid the deposit</string>
+    <string name="code_va">Payment Code</string>
+    <string name="withdraw_Code">withdraw_Code</string>
+    <string name="improve_limit_content_title">- How to Increase Limit -</string>
+    <string name="improve_limit_content1">1.Providing a limit-increasing service to users who have good credit and whose current loan has been settled.</string>
+    <string name="improve_limit_content2">2.Users who maintain a good credit history can pay a deposit for a limit-increasing service.</string>
+    <string name="improve_limit_content3">3.After successful limit-increasing, maintaining a good loan/repayment record can have a chance to get a higher amount limit.</string>
+    <string name="improve_limit_content4">4.Repayment on time, no past due loans and maintaining a good repayment record make it easier to obtain a limit-increasing service.</string>
+    <string name="improve_limit1">Higher Credit Limit</string>
+    <string name="improve_limit2">Longer Repayment Period</string>
+    <string name="improve_limit3">Fixed Deposit</string>
+    <string name="improve_limit4">Faster Loan Service</string>
+    <string name="improve_limit1_value">Higher Limit More Privileges</string>
+    <string name="improve_limit2_value">Repayment Period Extended to 14 days</string>
+    <string name="improve_limit3_value">Several Limit Increasing With One-time Deposit</string>
+    <string name="improve_limit4_value">Reduce Loan Processing time</string>
+
+    <string name="return_deposit_content">1.	The deposit will be refunded to users within 1 working day.
+
+\n\n2.	After the deposit is refunded, it will automatically return to the original limit (₱2,500.00).
+
+\n\n3.	If you need to apply for increasing limit again, the system will re-evaluate the credit after the user pays the deposit.
+</string>
+    <string name="return_hint">Are sure to refund the deposit?</string>
+    <string name="credit_hint_msg">No Deposit Refund Under Arrears</string>
+    <string name="credit_hint_msg2">No Deposit Refund Under Verifying</string>
+    <string name="credit_hint_msg3">No Increasing Limit if Deposit Not Withdrawn</string>
+    <string name="improve_limit_progress_title">Current Limit(₱)</string>
+    <string name="congratulations">Congratulations on Your\nSuccessful Limit-Increasing</string>
+    <string name="actual_received_amount">Actual Received Amount₱</string>
+    <string name="select_awithdrawal_channel">Select awithdraw channel</string>
+    <string name="amount_received">Actual Payment Amount(₱)</string>
+    <string name="poundage_msg">Payment Service Fee(₱)</string>
+    <string name="return_poundage_msg">Refund Service Fee(₱)</string>
+    <string name="refund_failed">Refund Failed</string>
+    <string name="refund_processing">Refund Processing</string>
+    <string name="deposit_refund">Deposit Refund</string>
+    <string name="refund_code">Withdraw Code</string>
+    <string name="refund_code_hint">Please provide 2 valid IDs and phone numbers when withdrawing funds</string>
+    <string name="paid_deposit">Not Meeting Requirements of Increasing Limit</string>
+    <string name="audit_fail">Credit Audit Processing</string>
+    <string name="refund_deposit_rightnow">Refund Immediately</string>
+    <string name="refund_code_describe">
+                            1. The withdraw code will expire within 48 hours, please withdraw your money before the code expires
+\n\n2. User should be the one to withdraw in person
+\n\n3. When withdrawing the fund, please state that it is an international transfer from Hongkong
+                        </string>
+
+
+</resources>

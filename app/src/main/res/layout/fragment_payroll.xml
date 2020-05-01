@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_F5F5F5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/LinearIdInform"
+            android:layout_marginTop="@dimen/dp1"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/work_nature" />
+
+            <TextView style="@style/TvIdInformRightDrawable" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp8"
+            android:textSize="13sp"
+            android:textColor="#FF9600"
+            android:background="#FFFAE5"
+            android:gravity="center"
+            android:text="@string/hint_payroll"/>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <!--公司名称-->
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/company_name" />
+
+            <EditText
+                android:id="@+id/et_company_name"
+                style="@style/TvIdInformRight"
+                android:hint="@string/company_name_hint"
+                android:maxLength="50"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <!--公司电话-->
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/company_tele" />
+
+            <EditText
+                android:id="@+id/et_company_tele"
+                style="@style/TvIdInformRight"
+                android:hint="@string/company_tele_hint"
+                android:inputType="phone"
+                android:maxLength="20"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <!--公司邮编码-->
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/company_postcode" />
+
+            <EditText
+                android:id="@+id/et_company_postcode"
+                style="@style/TvIdInformRight"
+                android:hint="@string/company_postcode_hint"
+                android:maxLength="20"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <!--公司性质-->
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/company_nature" />
+
+            <TextView
+                android:id="@+id/tv_company_nature"
+                style="@style/TvIdInformRightDrawable"
+                android:hint="@string/company_nature_hint"
+                android:maxLength="50"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <!--从事职业-->
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/work_jobs" />
+
+            <TextView
+                android:id="@+id/tv_work_jobs"
+                style="@style/TvIdInformRightDrawable"
+                android:hint="@string/work_jobs_hint"
+                android:maxLength="50"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <!--从业时长-->
+        <LinearLayout
+            android:id="@+id/ll_work_time"
+            style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/work_time" />
+
+            <TextView
+                android:id="@+id/tv_work_time"
+                style="@style/TvIdInformRightDrawable"
+                android:hint="@string/work_time_hint"
+                tools:ignore="TextViewEdits" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <!--群岛-->
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/company_address" />
+
+            <TextView
+                android:id="@+id/tv_island"
+                style="@style/TvIdInformRightDrawable"
+                android:layout_height="wrap_content"
+                android:hint="@string/pls_chose_island"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <!--区域-->
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/company_province" />
+
+            <TextView
+                android:id="@+id/tv_province"
+                style="@style/TvIdInformRightDrawable"
+                android:hint="@string/pls_chose_province"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <!--城市-->
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/company_city" />
+
+            <TextView
+                android:id="@+id/tv_city"
+                style="@style/TvIdInformRightDrawable"
+                android:hint="@string/pls_chose_city"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <!--地址-->
+        <LinearLayout style="@style/LinearIdInform" android:visibility="gone">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/detailed_address" />
+
+            <EditText
+                android:id="@+id/et_liveaddress"
+                style="@style/TvIdInformRight"
+                android:hint="@string/detailed_address_hint"
+                android:maxLength="100"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <!--月收入-->
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:maxLines="2"
+                android:text="@string/month_income" />
+
+            <!--android:digits="0123456789"-->
+            <EditText
+                android:id="@+id/tv_month_income"
+                style="@style/TvIdInformRight"
+                android:hint="@string/month_income_hint"
+                android:inputType="numberDecimal|number"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <!--发薪日-->
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/pay_cycle" />
+
+            <TextView
+                android:id="@+id/tv_pay_cycle"
+                style="@style/TvIdInformRightDrawable"
+                android:hint="@string/pay_cycle_hint"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <include
+            android:id="@+id/include_view"
+            layout="@layout/layout_pay_cycle" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp16"
+            android:layout_marginBottom="@dimen/dp10"
+            android:text="Upload company ID"
+            android:textColor="@color/gray_666666"
+            android:textSize="13sp" />
+        <!--就业证明(正面)-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+
+            android:layout_marginRight="@dimen/dp16">
+
+            <ImageView
+                android:id="@+id/iv_data_update_font"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp120"
+                android:scaleType="fitXY"
+                android:src="@drawable/data_update_bg" />
+
+            <TextView
+                android:id="@+id/tv_data_update_hint_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_data_update_font"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp20"
+                android:text="@string/upload_employment_certificate_font"
+                android:textColor="@color/black_333333"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/tv_data_hint_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_data_update_hint_font"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp5"
+                android:text="@string/hint_data_employment"
+                android:textColor="@color/gray_c5"
+                android:textSize="@dimen/sp12" />
+
+        </RelativeLayout>
+
+        <!--就业证明(反面)-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp16">
+
+            <ImageView
+                android:id="@+id/iv_data_update_back"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp120"
+                android:scaleType="fitXY"
+                android:src="@drawable/data_update_bg" />
+
+            <TextView
+                android:id="@+id/tv_data_update_hint_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_data_update_back"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp20"
+                android:text="@string/upload_employment_certificate_back"
+                android:textColor="@color/black_333333"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/tv_data_hint_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_data_update_hint_back"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp5"
+                android:text="@string/hint_data_employment"
+                android:textColor="@color/gray_c5"
+                android:textSize="@dimen/sp12" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp24"
+            android:layout_marginRight="@dimen/dp16"
+            android:text="Upload Latest Salary Slip"
+            android:textColor="@color/gray_666666"
+            android:textSize="13sp" />
+
+        <FrameLayout
+            android:id="@+id/fl_sample"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp120"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginRight="@dimen/dp16">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/acIv_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_sample" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#88888888" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/icon_magnifier"
+                android:drawableLeft="@drawable/icon_magnifier"
+                android:text="\tView Example"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp13" />
+        </FrameLayout>
+
+
+        <!--最新工资单-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp16"
+            android:layout_marginBottom="@dimen/dp80">
+
+            <ImageView
+                android:id="@+id/iv_theLatestPayroll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp120"
+                android:scaleType="fitXY"
+                android:src="@drawable/data_update_bg" />
+
+            <TextView
+                android:id="@+id/tv_theLatestPayroll_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_theLatestPayroll"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp20"
+                android:text="@string/update_company_image"
+                android:textColor="@color/black_333333"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/tv_theLatestPayroll_hints"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_theLatestPayroll_hint"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp5"
+                android:text="@string/hint_thelatestpay_hint"
+                android:textColor="@color/gray_c5"
+                android:textSize="@dimen/sp12" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

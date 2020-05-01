@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_F5F5F5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/commoninclude_toolbar"
+            android:layout_width="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="@dimen/dp48"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp0"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:src="@drawable/back_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pay Deposit"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container"
+            app:layout_constraintTop_toBottomOf="@+id/commoninclude_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_marginTop="@dimen/dp16"
+            android:paddingLeft="@dimen/dp17"
+            android:paddingRight="@dimen/dp17"
+            android:paddingStart="@dimen/dp17"
+            android:paddingEnd="@dimen/dp17"
+            android:paddingBottom="@dimen/dp28">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acTv_sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:text="Deposit"/>
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="#fff5f7f7"
+                app:layout_constraintTop_toBottomOf="@+id/acTv_sub_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acTv_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:textSize="12sp"
+                android:textColor="@color/gray_939393"
+                android:text="Amount(₱)"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_line" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acTv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:textStyle="bold"
+                android:textSize="36sp"
+                android:textColor="@color/black_333333"
+                fontPath="fonts/DIN1451.ttf"
+                tools:text="2,500.00"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/acTv_msg" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acTv_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp9"
+                android:paddingTop="@dimen/dp8"
+                android:paddingEnd="@dimen/dp9"
+                android:paddingBottom="@dimen/dp8"
+                android:paddingLeft="@dimen/dp9"
+                android:paddingRight="@dimen/dp9"
+                android:textColor="@color/gray_939393"
+                android:background="@drawable/width_adadad_shape"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="11sp"
+                android:text="Refund Details"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/btn_pay_rightnow"
+            style="@style/Radius3ButtonTheme"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container"
+            android:layout_marginTop="?android:attr/actionBarSize"
+            android:text="Pay Now"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

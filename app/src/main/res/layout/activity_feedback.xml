@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+	<data>
+
+		<import type="android.view.View" />
+	</data>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/bg_F5F5F5">
+
+		<include layout="@layout/include_toolbar" />
+
+		<EditText
+			android:id="@+id/et_suggest"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dp186_67"
+			android:background="@color/white"
+			android:layout_marginTop="@dimen/dp10"
+			android:hint="@string/pls_input_demand_or_advice"
+			android:gravity="top|left"
+			android:padding="@dimen/dp16"
+			android:textColor="@color/black_333333"
+			android:textSize="14sp" />
+
+		<LinearLayout
+			style="@style/LinearIdInform"
+			android:layout_marginTop="@dimen/dp10">
+
+			<TextView
+				style="@style/TvIdInformLeft"
+                android:textSize="@dimen/sp14"
+				android:text="@string/contacts_way" />
+
+			<EditText
+				android:id="@+id/et_contact"
+				style="@style/TvIdInformRight"
+				android:maxLength="20"
+                android:textSize="@dimen/sp14"
+				android:hint="@string/pls_input_phone_or_email" />
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/btn_submit"
+			style="@style/ButtonTheme"
+			android:enabled="false"
+			android:layout_marginLeft="@dimen/dp16"
+			android:layout_marginRight="@dimen/dp16"
+			android:text="@string/submit"
+			android:layout_marginTop="@dimen/dp48" />
+	</LinearLayout>
+</layout>

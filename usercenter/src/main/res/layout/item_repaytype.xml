@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+            name="data"
+            type="com.mmkj.usercenter.model.entity.RepayTypeEntity" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp5"
+        app:cardElevation="@dimen/dp2"
+        app:cardBackgroundColor="@color/white"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp24"
+            android:paddingLeft="@dimen/dp13"
+            android:paddingRight="@dimen/dp29"
+            android:paddingBottom="@dimen/dp24">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/tv_black"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:drawableLeft="@drawable/channel_info"
+                android:drawablePadding="@dimen/dp14"
+                android:text="@{data.accountHolder}" />
+
+            <TextView
+                android:layout_marginTop="@dimen/dp24"
+                android:id="@+id/tv_type"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/tv_black"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:drawableLeft="@drawable/channel_store"
+                android:drawablePadding="@dimen/dp14"
+                android:text="@{data.branchName}" />
+
+            <TextView
+                android:layout_marginTop="@dimen/dp24"
+                android:id="@+id/tv_address"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/tv_black"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:drawableLeft="@drawable/channel_location"
+                android:drawablePadding="@dimen/dp14"
+                android:text="@{data.showBranchAddress()}" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

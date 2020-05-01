@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <import type="com.mmkj.baselibrary.util.StringUtils" />
+
+        <variable
+            name="data"
+            type="com.mmkj.usercenter.model.entity.CashDepositInfoEntity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="@color/color_global">
+
+        <!--    Borrowing Service Fee-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/cl_ServiceView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Borrowing Service Fee(₱)\t\t"
+                android:textColor="#80ffffff"
+                android:textSize="@dimen/sp11" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acTv_Service_Fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:text="@{StringUtils.cutOutLastThree(StringUtils.doubleZheng(data.getFeeRate().doubleValue()))}"
+                tools:text="324" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--    Withdrawal Fee-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/cl_WithdrawalView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_ServiceView">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Withdrawal Fee(₱)"
+                android:textColor="#80ffffff"
+                android:textSize="@dimen/sp11" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acTv_Withdrawal_Fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:text="@{StringUtils.cutOutLastThree(StringUtils.doubleZheng(data.getFeeProcedurePay().doubleValue()))}"
+                tools:text="324" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--    Actual Arrival Amount Fee-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/cl_ActualArrivalAmountView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_WithdrawalView">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actual arrival Amount(₱)"
+                android:textColor="#80ffffff"
+                android:textSize="@dimen/sp11" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acTv_ActualArrivalAmount_Fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:text="@{StringUtils.cutOutLastThree(StringUtils.doubleZheng(data.getActualArrivalAmount().doubleValue()))}"
+                tools:text="324" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+            app:constraint_referenced_ids="cl_ServiceView,cl_WithdrawalView,cl_ActualArrivalAmountView" />
+
+        <!--    Term Of Loan-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/cl_TermOfLoanView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp20"
+            app:layout_constraintLeft_toRightOf="@id/barrier"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Term of Loan(D)"
+                android:textColor="#80ffffff"
+                android:textSize="@dimen/sp11" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acTv_TermOfLoan_Days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:text="@{String.valueOf(data.getProductDeadline())}"
+                tools:text="324" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <!--    Repayment Fee-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/cl_RepaymentView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@id/barrier"
+            app:layout_constraintTop_toBottomOf="@id/cl_TermOfLoanView">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repayment Fee(₱)"
+                android:textColor="#80ffffff"
+                android:textSize="@dimen/sp11" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acTv_Repayment_Fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:text="@{StringUtils.cutOutLastThree(StringUtils.doubleZheng(data.getFeeProcedureRepay().doubleValue()))}"
+                tools:text="324" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

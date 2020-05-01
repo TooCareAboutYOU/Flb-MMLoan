@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/bg_F5F5F5">
+
+		<include layout="@layout/include_toolbar" />
+        <ScrollView
+            android:id="@+id/sv_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp48">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp50">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/dp42"
+					android:gravity="center_vertical"
+					android:textSize="13sp"
+					android:textColor="@color/gray_bababa"
+					android:paddingLeft="@dimen/dp16"
+					android:paddingRight="@dimen/dp16"
+					android:text="@string/the_contact_one" />
+
+		<LinearLayout style="@style/LinearIdInform">
+
+			<TextView
+				style="@style/TvIdInformLeft"
+				android:text="@string/the_contact_phone_number" />
+
+			<TextView
+				android:id="@+id/tv_phone_emergency_one"
+				style="@style/TvIdInformRight"
+				android:drawableRight="@drawable/contacts"
+				android:hint="@string/the_contact_choose_phone" />
+		</LinearLayout>
+
+		<View style="@style/line_marginleft_16dp" />
+
+		<LinearLayout style="@style/LinearIdInform">
+
+			<TextView
+				style="@style/TvIdInformLeft"
+				android:text="@string/the_contact_name" />
+
+			<EditText
+				android:id="@+id/et_realname_emergency_one"
+				style="@style/TvIdInformRight"
+				android:maxLength="128"
+				android:hint="@string/the_contact_real_name" />
+		</LinearLayout>
+
+                <View style="@style/line_marginleft_16dp" />
+
+                <!--2-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp42"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp16"
+                    android:paddingRight="@dimen/dp16"
+                    android:text="@string/the_contact_two"
+                    android:textColor="@color/gray_bababa"
+                    android:textSize="13sp" />
+
+		<LinearLayout style="@style/LinearIdInform">
+
+			<TextView
+				style="@style/TvIdInformLeft"
+				android:text="@string/the_contact_phone_number" />
+
+			<TextView
+				android:id="@+id/tv_phone_emergency_two"
+				style="@style/TvIdInformRight"
+				android:drawableRight="@drawable/contacts"
+				android:hint="@string/the_contact_choose_phone" />
+		</LinearLayout>
+
+		<View style="@style/line_marginleft_16dp" />
+
+		<LinearLayout style="@style/LinearIdInform">
+
+			<TextView
+				style="@style/TvIdInformLeft"
+				android:text="@string/the_contact_name" />
+
+                    <EditText
+                        android:id="@+id/et_realname_emergency_two"
+                        style="@style/TvIdInformRight"
+                        android:hint="@string/the_contact_real_name"
+                        android:maxLength="128" />
+                </LinearLayout>
+
+                <View style="@style/line_marginleft_16dp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_next"
+            style="@style/ButtonTheme"
+            android:layout_alignParentBottom="true"
+            android:enabled="false"
+            android:text="@string/submit" />
+    </RelativeLayout>
+</layout>

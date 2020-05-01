@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_F5F5F5"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_toolbar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0"
+                android:layout_weight="1"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_select_position"
+                        style="@style/LinearIdInform"
+                        android:layout_marginTop="@dimen/dp1"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:text="@string/work_nature" />
+
+                        <TextView
+                            android:id="@+id/work_name"
+                            style="@style/TvIdInformRightDrawable" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_employment_information_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </ScrollView>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/acBtn_jump"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/white"
+                    android:text="@string/jump"
+                    android:textSize="14sp"
+                    android:background="#FF9600"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_authentication_submit"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:text="@string/next_step"
+                    android:background="@drawable/radius0_btn_main"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <!--<androidx.appcompat.widget.AppCompatButton-->
+                <!--android:id="@+id/btn_authentication_submit"-->
+                <!--style="@style/ButtonTheme"-->
+                <!--android:enabled="false"-->
+                <!--android:text="@string/submit" />-->
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_service_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp64"
+            android:src="@drawable/intelligent_service"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</layout>

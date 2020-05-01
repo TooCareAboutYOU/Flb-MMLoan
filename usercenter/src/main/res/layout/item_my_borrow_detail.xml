@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.mmkj.usercenter.model.entity.LoanListData" />
+
+        <variable
+            name="mode"
+            type="boolean" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp4"
+        app:cardElevation="@dimen/dp1"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.mmkj.usercenter.viewmodel.loanlist.LoanListItemView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp20"
+                app:setImg="@{@drawable/repay_biilno}"
+                app:setTitleColor="@{mode?@color/gray_999999:@color/gray_d1d1d1}"
+                app:setTitleText="@{@string/order_no}"
+                app:setValueColor="@{mode?@color/tv_black:@color/gray_d1d1d1}"
+                app:setValueSize="@{@dimen/sp22}"
+                app:setValueText="@{data.orderNo}" />
+
+            <com.mmkj.usercenter.viewmodel.loanlist.LoanListItemView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp20"
+                app:setImg="@{@drawable/my_borrow_true}"
+                app:setTitleColor="@{mode?@color/gray_999999:@color/gray_d1d1d1}"
+                app:setTitleText="@{@string/borrow}"
+                app:setValueColor="@{mode?@color/tv_black:@color/gray_d1d1d1}"
+                app:setValueSize="@{@dimen/sp22}"
+                app:setValueText="@{data.showLoanDate()}" />
+            <!--android:textColor="@drawable/tv_borrow_selector"-->
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp22">
+
+                <com.mmkj.usercenter.viewmodel.loanlist.LoanListItemView
+                    android:id="@+id/li_borrow_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp22"
+                    app:setImg="@{@drawable/borrow_money_icon}"
+                    app:setTitleColor="@{mode?@color/gray_999999:@color/gray_d1d1d1}"
+                    app:setTitleText="@{@string/borrow_money}"
+                    app:setValueColor="@{mode?@color/color_global:@color/gray_d1d1d1}"
+                    app:setValueSize="@{@dimen/sp41}"
+                    app:setValueText="@{data.showAmount()}"
+                    tools:ignore="MissingConstraints" />
+
+
+                <com.mmkj.usercenter.viewmodel.loanlist.LoanListItemView
+                    app:layout_constraintLeft_toRightOf="@id/li_borrow_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp22"
+                    android:layout_marginLeft="@dimen/dp14"
+                    app:setImg="@{@drawable/borrow_time_limit}"
+                    app:setTitleColor="@{mode?@color/gray_999999:@color/gray_d1d1d1}"
+                    app:setTitleText="@{@string/loan_deadline}"
+                    app:setValueColor="@{mode?@color/color_global:@color/gray_d1d1d1}"
+                    app:setValueSize="@{@dimen/sp34}"
+                    app:setValueText="@{data.loadPeriod}"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.mmkj.usercenter.viewmodel.loanlist.LoanListItemView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp22"
+                android:paddingBottom="@dimen/dp22"
+                android:layout_marginLeft="@dimen/dp16"
+                app:setImg="@{@drawable/my_return_borrow_true}"
+                app:setTitleColor="@{mode?@color/gray_999999:@color/gray_d1d1d1}"
+                app:setTitleText="@{@string/return_borrow}"
+                app:setValueColor="@{mode?@color/tv_black:@color/gray_d1d1d1}"
+                app:setValueSize="@{@dimen/sp22}"
+                app:setValueText="@{data.showRepayDate()}" />
+
+            <View
+                android:id="@+id/diver"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/gray_f2f2f2" />
+
+            <TextView
+                android:id="@+id/look_va"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp16"
+                android:drawableRight="@drawable/repay_look_va"
+                android:text="@string/check_withdraw_code"
+                android:drawablePadding="@dimen/dp5"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

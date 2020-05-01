@@ -1,0 +1,224 @@
+{
+  "Luzon":{
+    "region_list":{
+      "Cordillera Administrative Region" :{
+        "city_list":[
+          "Baguio",
+          "Tabuk"
+        ]
+      },
+      "National Capital Region":{
+        "city_list":[
+          "Caloocan",
+          "Las Piñas",
+          "Makati",
+          "Malabon",
+          "Mandaluyong",
+          "Manila",
+          "Marikina",
+          "Muntinlupa",
+          "Navotas",
+          "Parañaque",
+          "Pasay",
+          "Pasig",
+          "Quezon",
+          "San Juan",
+          "Taguig",
+          "Valenzuela"
+        ]
+      },
+      "Ilocos Region":{
+        "city_list":[
+          "Batac",
+          "Laoag",
+          "Candom",
+          "Vigan",
+          "San Fernando",
+          "Alaminos",
+          "Dagupan",
+          "San Carlos",
+          "Urdaneta"
+        ]
+      },
+      "Cagayan Valley":{
+        "city_list":[
+          "Tuguegarao",
+          "Cauayan",
+          "Ilagan",
+          "Santitago"
+        ]
+      },
+      "Central Luzon":{
+        "city_list":[
+          "Balanga",
+          "Malolos",
+          "Meycauayan",
+          "San Joso del Monte",
+          "Cabanatuan",
+          "Gapan",
+          "Muñoz",
+          "Palayan",
+          "Angeles",
+          "Mabalacat",
+          "San Fernando",
+          "Tarlac",
+          "Olongapo",
+          "San Jose"
+          ]
+      },
+      "CALABARZON":{
+        "city_list":[
+          "Batangas",
+          "Lipa",
+          "Tanauan",
+          "Bacoor",
+          "Cavite",
+          "Dasmariñas",
+          "Imus",
+          "Tagaytay",
+          "Trece Martires",
+          "Biñan",
+          "Cabuyao",
+          "San Pablo",
+          "Santa Rosa",
+          "Lucena",
+          "Tayabas",
+          "Antipolo",
+          "Calamba"
+        ]
+      },
+      "MIMAROPA":{
+        "city_list":[
+          "Calapan",
+          "Puerto Princesa"
+        ]
+      },
+      "Bicol Region":{
+        "city_list":[
+          "Legazpi",
+          "Ligao",
+          "Tabaco",
+          "Iriga",
+          "Naga",
+          "Masbate",
+          "Sorsogon"
+        ]
+      }
+    }
+  },
+  "Visayas":{
+    "region_list":{
+      "Western Visayas":{
+        "city_list":[
+          "Roxas",
+          "Iloilo",
+          "Passi",
+          "Bacolod",
+          "Bago",
+          "Cadiz",
+          "Escalante",
+          "Himamaylan",
+          "Kabankalan",
+          "La Carlota",
+          "Sagay",
+          "San Carlos",
+          "Silay",
+          "Sipalay",
+          "Talisay",
+          "Victorias"
+        ]
+      },
+      "Central Visayas":{
+        "city_list":[
+          "Tagbilaran",
+          "Bogo",
+          "Carcar",
+          "Cebu",
+          "Danao",
+          "Lapu-Lapu",
+          "Mandaue",
+          "Naga",
+          "Talisay",
+          "Bais",
+          "Bayawan",
+          "Canlaon",
+          "Dumaguete",
+          "Guihulngan",
+          "Tanjay"
+        ]
+      },
+      "Eastern Visayas":{
+        "city_list":[
+          "Borongan",
+          "Baybay",
+          "Ormoc",
+          "Tacloban",
+          "Calbayog",
+          "Catbalogan",
+          "Maasin"
+        ]
+      }
+    }
+  },
+  "Mindanao":{
+    "region_list":{
+      "Zamboanga Peninsula" :{
+        "city_list":[
+          "Isabela",
+          "Dapitan",
+          "Dipolog",
+          "Pagadian",
+          "Zamboanga"
+        ]
+      },
+      "Northern Mindanao" :{
+        "city_list":[
+          "Malaybalay",
+          "Valencia",
+          "Iligan",
+          "Oroquieta",
+          "Ozamiz",
+          "Tangub",
+          "Cagayan de Oro",
+          "El Salvador",
+          "Gingoog"
+        ]
+      },
+      "Davao Region" :{
+        "city_list":[
+          "Panabo",
+          "Samal",
+          "Tagum",
+          "Davao",
+          "Digos",
+          "Mati"
+        ]
+      },
+      "SOCCSKSARGEN" :{
+        "city_list":[
+          "Kidapawan",
+          "Cotabato",
+          "General Santos",
+          "Koronadal",
+          "Tacurong"
+        ]
+      },
+      "Caraga Region" :{
+        "city_list":[
+          "Butuan",
+          "Cabadbaran",
+          "Bayugan",
+          "Surigao",
+          "Bislig",
+          "Tandag"
+        ]
+      },
+      "Autonomous Region in Muslim Mindanao" :{
+        "city_list":[
+          "Lamitan",
+          "Marawi"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_F5F5F5">
+        <LinearLayout
+            style="@style/LinearIdInform"
+            android:layout_marginTop="@dimen/dp1"
+            android:visibility="gone"
+            >
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/work_nature" />
+
+            <TextView
+                style="@style/TvIdInformRightDrawable"
+                />
+        </LinearLayout>
+        <View style="@style/line_marginleft_16dp" />
+        <LinearLayout style="@style/LinearIdInform">
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/repayment_source"
+                android:maxLines="2"
+                />
+
+            <EditText
+                android:id="@+id/et_repayment_source"
+                style="@style/TvIdInformRight"
+                android:hint="@string/repayment_source_hint"
+                android:singleLine="true"
+                android:maxLength="50"
+                />
+        </LinearLayout>
+        <View style="@style/line_marginleft_16dp" />
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/month_income"
+                android:maxLines="2"
+                />
+
+            <EditText
+                android:id="@+id/et_month_income"
+                style="@style/TvIdInformRight"
+                android:digits="0123456789"
+                android:hint="@string/month_income_hint"
+                android:inputType="phone"
+                android:singleLine="true"
+                />
+        </LinearLayout>
+        <View style="@style/line_marginleft_16dp" />
+    </LinearLayout>
+</layout>

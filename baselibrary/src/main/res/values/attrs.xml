@@ -1,0 +1,46 @@
+<resources>
+    <declare-styleable name="ArcProgress">
+        <attr name="arc_progress" format="integer"/>
+        <attr name="arc_angle" format="float"/>
+        <attr name="arc_stroke_width" format="dimension"/>
+        <attr name="arc_max" format="integer"/>
+
+        <attr name="arc_unfinished_color" format="color"/>
+        <attr name="arc_finished_color" format="color"/>
+
+        <attr name="arc_text_size" format="dimension"/>
+        <attr name="arc_text_color" format="color"/>
+
+        <attr name="arc_suffix_text" format="string"/>
+        <attr name="arc_suffix_text_size" format="dimension"/>
+        <attr name="arc_suffix_text_padding" format="dimension"/>
+
+        <attr name="arc_bottom_text" format="string"/>
+        <attr name="arc_bottom_text_size" format="dimension"/>
+    </declare-styleable>
+
+
+    <!--progressbarview-->
+    <declare-styleable name="ProgressbarView">
+        <attr name="p_width" format="dimension"/> <!-- 控件宽度 -->
+        <attr name="p_height" format="dimension"/><!-- 控件高度 -->
+        <attr name="p_maxValue" format="integer"/><!-- 控件progress最大值 -->
+        <attr name="p_progressValue" format="integer"/><!--  当前 progress value -->
+        <attr name="p_progressColor" format="color"/><!-- progress 进度条颜色 -->
+        <attr name="p_progressBackColor" format="color"/><!-- progress 背景 颜色 -->
+        <attr name="p_progressSegmentColor" format="color"/><!-- progress 分段 颜色 -->
+        <attr name="p_progressDoubleSegColor" format="color"/><!-- progress 分段间隔 颜色 -->
+        <attr name="p_progressSegmentNumber" format="integer"/><!--  当前 progress 分段间隔数量 -->
+    </declare-styleable>
+
+    <declare-styleable name="RulerView">
+        <attr name="indicateColor" format="color|reference" />
+        <attr name="selectedColor" format="color|reference" />
+        <attr name="textColor" format="color|reference" />
+        <attr name="textSize" format="dimension|reference"></attr>
+        <attr name="begin" format="integer|reference" />
+        <attr name="end" format="integer|reference" />
+        <attr name="indicateWidth" format="dimension|reference" />
+        <attr name="indicatePadding" format="dimension|reference" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_F5F5F5">
+
+        <include layout="@layout/include_toolbar" />
+
+        <View style="@style/ViewStyle.Title" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/LinearIdInform"
+                    android:layout_marginTop="@dimen/dp10">
+
+                    <TextView
+                        android:id="@+id/tv_idcardtype_left"
+                        style="@style/TvIdInformLeft"
+                        android:text="@string/idcard_type"
+                        android:textColor="@color/black_333333" />
+
+                    <TextView
+                        android:id="@+id/tv_idcard_type"
+                        style="@style/TvIdInformRightDrawable"
+                        android:hint="@string/pls_chose_idcard_type" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@color/white"
+                    android:lineSpacingExtra="@dimen/dp6"
+                    android:padding="@dimen/dp18"
+                    android:gravity="center"
+                    android:text="@string/idcertificate_top"
+                    android:textColor="@color/blue_25344f"
+                    android:textSize="15sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_idcertificate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"
+                    android:paddingLeft="@dimen/dp6"
+                    android:paddingRight="@dimen/dp6"
+                    android:scrollbars="none" />
+
+
+                <LinearLayout
+                    style="@style/LinearIdInform"
+                    android:layout_marginTop="@dimen/dp10">
+
+                    <TextView
+                        style="@style/TvIdInformLeft"
+                        android:text="@string/idcard_number" />
+
+                    <EditText
+                        android:id="@+id/et_idcard"
+                        style="@style/TvIdInformRight"
+                        android:hint="@string/pls_input_idcardnumb"
+                        android:maxLength="50"
+                        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <View style="@style/line_marginleft_16dp" />
+
+                <LinearLayout style="@style/LinearIdInform">
+
+                    <TextView
+                        style="@style/TvIdInformLeft"
+                        android:text="@string/surname" />
+
+                    <EditText
+                        android:id="@+id/et_surname"
+                        style="@style/TvIdInformRight"
+                        android:hint="@string/surname"
+                        android:maxLength="64"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <View style="@style/line_marginleft_16dp" />
+
+                <LinearLayout style="@style/LinearIdInform">
+
+                    <TextView
+                        style="@style/TvIdInformLeft"
+                        android:text="@string/given_name" />
+
+                    <EditText
+                        android:id="@+id/et_givenname"
+                        style="@style/TvIdInformRight"
+                        android:hint="@string/given_name"
+                        android:maxLength="64"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <View style="@style/line_marginleft_16dp" />
+
+                <LinearLayout style="@style/LinearIdInform">
+
+                    <TextView
+                        style="@style/TvIdInformLeft"
+                        android:text="@string/middle_name" />
+
+                    <EditText
+                        android:id="@+id/et_middle_name"
+                        style="@style/TvIdInformRight"
+                        android:maxLength="64"
+                        android:hint="@string/middle_name"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_submit"
+                        style="@style/BottomButtonTheme"
+                        android:enabled="false"
+                        android:text="@string/submit" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

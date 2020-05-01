@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/bg_F5F5F5"
+		android:orientation="vertical">
+
+		<include layout="@layout/include_toolbar" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dp10"
+			android:orientation="vertical"
+			android:background="@color/white"
+			android:paddingLeft="@dimen/dp16">
+
+			<LinearLayout
+				style="@style/LinearRegisterStyle"
+				android:layout_marginRight="@dimen/dp24">
+
+				<ImageView
+					style="@style/IvRegisterStyle"
+					android:src="@drawable/change_idcard" />
+
+				<com.mmkjflb.mmloan.utils.view.DeleteEditText
+					android:id="@+id/et_idcard"
+					style="@style/EtInputChangePhoneOneStyle"
+					android:hint="@string/pls_input_old_idcard" />
+
+			</LinearLayout>
+
+			<View style="@style/line_marginleft_16dp" />
+
+			<LinearLayout
+				style="@style/LinearRegisterStyle"
+				android:layout_marginRight="@dimen/dp24">
+
+				<ImageView
+					style="@style/IvRegisterStyle"
+					android:src="@drawable/change_username" />
+
+				<com.mmkjflb.mmloan.utils.view.DeleteEditText
+					android:id="@+id/et_username"
+					style="@style/EtInputChangePhoneOneStyle"
+					android:hint="@string/pls_input_name" />
+
+			</LinearLayout>
+
+			<View style="@style/line_marginleft_16dp" />
+
+			<LinearLayout
+				style="@style/LinearRegisterStyle"
+				android:layout_marginRight="@dimen/dp24">
+
+				<ImageView
+					style="@style/IvRegisterStyle"
+					android:src="@drawable/phone" />
+
+				<EditText
+					android:id="@+id/et_phonenumb"
+					style="@style/EtInputChangePhoneOneStyle"
+					android:inputType="phone"
+					android:digits="0123456789"
+                    android:maxLength="11"
+					android:hint="@string/pls_input_old_phone" />
+
+			</LinearLayout>
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/btn_changephone_one"
+			style="@style/LoginButtonTheme"
+			android:layout_marginTop="@dimen/dp48"
+			android:enabled="false"
+			android:layout_marginLeft="@dimen/dp16"
+			android:layout_marginRight="@dimen/dp16"
+			android:text="@string/next" />
+
+	</LinearLayout>
+
+</layout>

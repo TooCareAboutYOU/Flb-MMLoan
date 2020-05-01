@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:padding="@dimen/dp30">
+
+            <LinearLayout
+                android:id="@+id/rl_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radius5_btn_main"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp24">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp34"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:layout_marginBottom="@dimen/dp20">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/loan_suc"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/dp18"
+                        android:paddingRight="@dimen/dp18"
+                        android:src="@drawable/dialog_close_white"
+                        tools:ignore="ContentDescription"/>
+                </RelativeLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp8"
+                        android:src="@drawable/loan_point_left"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_withdraw_code"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tv_withdraw_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/withdraw_code"
+                        android:textColor="#FFBBAF"
+                        android:textSize="12sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp8"
+                        android:src="@drawable/loan_point_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_withdraw_code"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_withdraw_numb"
+                    fontPath="fonts/DIN1451Mittelschrift-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:text="SKO7845499481"
+                    android:textColor="@color/white"
+                    android:textSize="26sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp48"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:layout_marginRight="@dimen/dp48"
+                    android:background="@drawable/radius3_white15_shape"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp8"
+                    android:paddingTop="@dimen/dp4"
+                    android:paddingRight="@dimen/dp8"
+                    android:paddingBottom="@dimen/dp4"
+                    android:text="@string/withdraw_request"
+                    android:textColor="#FFBBAF"
+                    android:textSize="11sp"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp22">
+
+                    <TextView
+                        android:id="@+id/tv_loanamount_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/withdraw_amount_yuan"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/tv_loan_amount"
+                        fontPath="fonts/DIN1451Mittelschrift-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/dp6"
+                        android:text="2,508.75"
+                        android:textColor="#FFFC00"
+                        android:textSize="30sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_loanamount_title"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_payer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_loan_amount">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/payer"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintRight_toLeftOf="@+id/point_one"
+                            tools:ignore="MissingConstraints" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/point_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" :  "
+                            android:textColor="@android:color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:id="@+id/tv_payer_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintLeft_toRightOf="@+id/point_one"
+                            tools:text="Pang jin shan"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_sources"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_payer">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp6"
+                            android:text="@string/remittance_source"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintRight_toLeftOf="@+id/point_two"
+                            tools:ignore="MissingConstraints" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/point_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" :  "
+                            android:textColor="@android:color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:id="@+id/tv_source_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintLeft_toRightOf="@+id/point_two"
+                            tools:text="zhongguoyinhang"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_channel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_sources">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp6"
+                            android:text="Withdrawal Channel"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintRight_toLeftOf="@+id/point_three"
+                            tools:ignore="MissingConstraints" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/point_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" :  "
+                            android:textColor="@android:color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:id="@+id/tv_channel_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintLeft_toRightOf="@+id/point_three"
+                            tools:text="M.Lhuillier"
+                            tools:ignore="MissingConstraints" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp8"
+                    android:text="- Form HK -"
+                    android:textColor="#ff059872"
+                    android:textSize="11sp"
+                    android:visibility="gone"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp42"
+                    android:layout_marginLeft="@dimen/dp26"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp26"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardCornerRadius="@dimen/dp4"
+                    app:cardElevation="@dimen/dp1"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btn_confirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/check_withdraw_code"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_global"
+                        android:textSize="15sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!--<Button-->
+                    <!--android:id="@+id/btn_confirm"-->
+                    <!--style="@style/Widget.AppCompat.Button"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="@dimen/dp42"-->
+                    <!--android:layout_marginLeft="@dimen/dp26"-->
+                    <!--android:layout_marginTop="@dimen/dp20"-->
+                    <!--android:layout_marginRight="@dimen/dp26"-->
+                    <!--android:background="@drawable/radius3_white15_shape"-->
+                    <!--android:elevation="@dimen/dp5"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="@string/check_withdraw_code"-->
+                    <!--android:textAllCaps="false"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:textSize="15sp"/>-->
+                <!---->
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp28"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp22"
+                    android:text="@string/loan_suc_mark"
+                    android:textColor="@color/white"
+                    android:alpha="0.61"
+                    android:textSize="11sp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:text="@string/contact_us"
+                    android:textSize="11sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

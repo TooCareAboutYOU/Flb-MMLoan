@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="detailPresenter"
+            type="com.mmkj.usercenter.viewmodel.repaydetail.RepayDetailPresenter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_F5F5F5"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            android:background="@color/white"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp0"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:src="@drawable/back_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/repay_detail"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_help"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp0"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:src="@drawable/repay_help"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp0"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:text="@string/finish"
+                android:textColor="@color/blue_398afe"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/top">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp32"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yuan"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    fontPath="fonts/DIN1451.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@{detailPresenter.showRealRepay()}"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/sp28" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp15"
+                android:drawableLeft="@drawable/repay_success"
+                android:text="@string/repay_success"
+                android:textColor="@color/gray_999999"
+                android:textSize="@dimen/sp13" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_5"
+                android:layout_marginLeft="@dimen/dp17"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginRight="@dimen/dp17"
+                android:background="@color/gray_f2f2f2" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ll_top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp30">
+
+                <com.mmkj.baselibrary.widget.LinearItem
+                    style="@style/loan_item_style"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp30"
+                    app:key="@{@string/repay_date}"
+                    app:value="@{detailPresenter.showRepayDate()}" />
+
+                <com.mmkj.baselibrary.widget.LinearItem
+                    style="@style/loan_item_style"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    app:key="@{@string/loan_amount_real}"
+                    app:value="@{detailPresenter.showLoanAmount()}" />
+
+                <com.mmkj.baselibrary.widget.LinearItem
+                    style="@style/loan_item_style"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    app:key="@{@string/loan_server_money}"
+                    app:value="@{detailPresenter.showLoanService()}" />
+
+                <com.mmkj.baselibrary.widget.LinearItem
+                    style="@style/loan_item_style"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    app:key="@{@string/loan_fee}"
+                    app:value="@{detailPresenter.showLoanFee()}" />
+
+                <com.mmkj.baselibrary.widget.LinearItem
+                    style="@style/loan_item_style"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    app:key="@{@string/repay_fee}"
+                    app:value="@{detailPresenter.showRepayFee()}" />
+
+                <com.mmkj.baselibrary.widget.LinearItem
+                    android:id="@+id/lItem_interest"
+                    style="@style/loan_item_style"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    app:key="@{@string/loan_interest}"
+                    app:value="@{detailPresenter.showInterest()}" />
+
+                <com.mmkj.baselibrary.widget.LinearItem
+                    style="@style/loan_item_style"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:visibility="@{detailPresenter.isShowOverdue()?View.VISIBLE:View.GONE}"
+                    app:key="@{@string/overdue_penalty}"
+                    app:value="@{detailPresenter.showOverdue()}" />
+
+                <com.mmkj.baselibrary.widget.LinearItem
+                    style="@style/loan_item_style"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    app:key="@{@string/loan_date}"
+                    app:value="@{detailPresenter.showLoanDate()}" />
+
+                <com.mmkj.baselibrary.widget.LinearItem
+                    style="@style/loan_item_style"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    app:key="@{@string/loan_billno}"
+                    app:value="@{detailPresenter.showBillNo()}" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

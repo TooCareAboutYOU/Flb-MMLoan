@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/bg_F5F5F5">
+
+		<include layout="@layout/include_toolbar" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dp10"
+			android:paddingHorizontal="@dimen/dp17"
+			android:background="@color/white"
+			android:orientation="vertical"
+			android:paddingVertical="@dimen/dp18"
+			>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="GCash account number "
+				android:textColor="#ff333333"
+				android:textSize="14sp"
+				/>
+			<EditText
+				android:id="@+id/et_gCash_account"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@null"
+				android:hint="Enter your GCash account number"
+				android:textColorHint="#ffbababa"
+				android:layout_marginTop="@dimen/dp10"
+				android:textSize="14sp"
+				android:inputType="number"
+				/>
+			<View style="@style/line_marginleft_16dp"
+				android:layout_marginTop="@dimen/dp15"
+				/>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/dp15"
+				android:text="Verification Code"
+				android:textColor="#ff333333"
+				android:textSize="14sp"
+				/>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/dp10"
+				android:orientation="horizontal"
+				>
+
+
+				<EditText
+					android:id="@+id/et_sms_code"
+					android:layout_width="@dimen/dp0"
+					android:layout_height="match_parent"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="1"
+					android:background="@null"
+					android:hint="Enter your verification code"
+					android:inputType="number"
+					android:textColorHint="#ffc7c7c7"
+					android:textSize="14sp"
+					/>
+
+				<TextView
+					android:id="@+id/tv_get_code"
+					android:layout_width="wrap_content"
+					android:layout_height="@dimen/dp27"
+					android:background="@drawable/radius3_main_hollow_shape"
+					android:text="Get code"
+					android:textColor="#ff25c69b"
+					android:gravity="center"
+					android:paddingHorizontal="@dimen/dp10"
+					android:textSize="12sp"
+					/>
+			</LinearLayout>
+		</LinearLayout>
+		<TextView
+			android:id="@+id/tv_link_account"
+			style="@style/ButtonTheme"
+			android:enabled="true"
+			android:layout_marginLeft="@dimen/dp16"
+			android:layout_marginRight="@dimen/dp16"
+			android:text="Link Accout"
+			android:layout_marginTop="@dimen/dp48" />
+	</LinearLayout>
+</layout>

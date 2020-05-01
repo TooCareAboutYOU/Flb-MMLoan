@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- pressed 特别注意排放顺序呢-->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient android:angle="45"
+                android:centerColor="@color/color_global"
+                android:endColor="@color/color_global"
+                android:startColor="@color/color_global"
+                android:type="linear" />
+        </shape>
+    </item>
+    <!-- focus -->
+    <item android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <gradient android:angle="45"
+                android:centerColor="@color/color_global"
+                android:endColor="@color/color_global"
+                android:startColor="@color/color_global"
+                android:type="linear" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#ffd7d7db" />
+        </shape>
+    </item>
+</selector>

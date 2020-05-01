@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_F5F5F5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_toolbar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/LinearIdInform"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:lines="1"
+                            android:text="@string/name" />
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="25"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical|end"
+                            android:maxLines="2"
+                            android:textColor="@color/black_333333"
+                            android:textSize="14sp"
+                            tools:text="Test" />
+                    </LinearLayout>
+
+
+                    <View
+                        style="@style/line_marginleft_16dp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        style="@style/LinearIdInform"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_idinform_key"
+                            style="@style/TvIdInformLeft"
+                            android:lines="1"
+                            tools:text="@string/idcard_numb" />
+
+                        <TextView
+                            android:id="@+id/tv_idcard_numb"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="25"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical|end"
+                            android:maxLines="2"
+                            android:textColor="@color/black_333333"
+                            android:textSize="14sp"
+                            tools:text="Test" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearIdInform"
+                        android:layout_marginTop="@dimen/dp10">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:text="@string/sex" />
+
+                        <TextView
+                            android:id="@+id/tv_sex"
+                            style="@style/TvIdInformRightDrawable"
+                            android:hint="@string/pls_chose_sex" />
+                    </LinearLayout>
+
+                    <View style="@style/line_marginleft_16dp" />
+
+                    <LinearLayout style="@style/LinearIdInform">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:text="@string/birthday" />
+
+                        <TextView
+                            android:id="@+id/tv_birthday"
+                            style="@style/TvIdInformRightDrawable"
+                            android:hint="@string/pls_chose_birthday" />
+                    </LinearLayout>
+
+                    <View style="@style/line_marginleft_16dp" />
+
+                    <LinearLayout style="@style/LinearIdInform">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:text="@string/islands_region" />
+
+                        <TextView
+                            android:id="@+id/tv_island"
+                            style="@style/TvIdInformRightDrawable"
+                            android:hint="@string/pls_chose_island"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <View style="@style/line_marginleft_16dp" />
+
+                    <LinearLayout style="@style/LinearIdInform">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:text="@string/province" />
+
+                        <TextView
+                            android:id="@+id/tv_province"
+                            style="@style/TvIdInformRightDrawable"
+                            android:hint="@string/pls_chose_province"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <View style="@style/line_marginleft_16dp" />
+
+                    <LinearLayout style="@style/LinearIdInform">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:text="@string/city" />
+
+                        <TextView
+                            android:id="@+id/tv_city"
+                            style="@style/TvIdInformRightDrawable"
+                            android:hint="@string/pls_chose_city"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <View style="@style/line_marginleft_16dp" />
+
+                    <LinearLayout style="@style/LinearIdInform">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:text="@string/live_address" />
+
+                        <EditText
+                            android:id="@+id/et_liveaddress"
+                            style="@style/TvIdInformRight"
+                            android:hint="@string/pls_input_liveaddress"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <View style="@style/line_marginleft_16dp" />
+
+                    <LinearLayout style="@style/LinearIdInform">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:text="@string/address_type" />
+
+                        <TextView
+                            android:id="@+id/tv_address_type"
+                            style="@style/TvIdInformRightDrawable"
+                            android:hint="@string/pls_chose_address_type"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <View style="@style/line_marginleft_16dp" />
+
+                    <LinearLayout style="@style/LinearIdInform">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:text="@string/education_msg" />
+
+                        <TextView
+                            android:id="@+id/tv_education_status"
+                            style="@style/TvIdInformRightDrawable"
+                            android:hint="@string/pls_chose_education" />
+                    </LinearLayout>
+
+                    <View style="@style/line_marginleft_16dp" />
+
+                    <LinearLayout style="@style/LinearIdInform">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:text="@string/marital_status" />
+
+                        <TextView
+                            android:id="@+id/tv_marital_status"
+                            style="@style/TvIdInformRightDrawable"
+                            android:hint="@string/pls_chose_marital_status" />
+                    </LinearLayout>
+
+                    <View style="@style/line_marginleft_16dp" />
+
+                    <LinearLayout style="@style/LinearIdInform">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:text="Email" />
+
+                        <EditText
+                            android:id="@+id/et_email_account"
+                            style="@style/TvIdInformRight"
+                            android:hint="@string/pls_input_email"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <View style="@style/line_marginleft_16dp" />
+
+                    <LinearLayout style="@style/LinearIdInform">
+
+                        <TextView
+                            style="@style/TvIdInformLeft"
+                            android:text="@string/pls_chose_other_phone" />
+
+                        <EditText
+                            android:id="@+id/et_other_phone"
+                            style="@style/TvIdInformRight"
+                            android:hint="@string/pls_chose_other_phone_amount"
+                            android:inputType="number"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="@color/white"
+                        android:paddingLeft="@dimen/dp16"
+                        android:paddingTop="@dimen/dp20"
+                        android:paddingRight="@dimen/dp16"
+                        android:paddingBottom="@dimen/dp20">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/acTv_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/base_info_phone_tag"
+                            android:textColor="@color/black_333333"
+                            android:textSize="@dimen/sp14"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp54"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:orientation="horizontal"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/acTv_tag">
+
+                            <ToggleButton
+                                android:id="@+id/tBtn_mine"
+                                android:layout_width="@dimen/dp0"
+                                android:layout_height="@dimen/dp54"
+                                android:layout_marginEnd="@dimen/dp5"
+                                android:layout_marginRight="@dimen/dp5"
+                                android:layout_weight="1"
+                                android:background="@drawable/selector_shape_use_phone"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:textColor="@color/selector_shape_use_phone_txt_color"
+                                android:textOff="Yes,this phone\nis mine"
+                                android:textOn="Yes,this phone\nis mine"
+                                android:textSize="@dimen/sp13" />
+
+                            <ToggleButton
+                                android:id="@+id/tBtn_other"
+                                android:layout_width="@dimen/dp0"
+                                android:layout_height="@dimen/dp54"
+                                android:layout_marginStart="@dimen/dp5"
+                                android:layout_marginLeft="@dimen/dp5"
+                                android:layout_weight="1"
+                                android:background="@drawable/selector_shape_use_phone"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:textColor="@color/selector_shape_use_phone_txt_color"
+                                android:textOff="No,someone else\nowns this phone"
+                                android:textOn="No,someone else\nowns this phone"
+                                android:textSize="@dimen/sp13" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp16">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/acTv_tag2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/using_phone_time"
+                            android:textColor="@color/black_333333"
+                            android:textSize="@dimen/sp14" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llc_UsePhoneTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/acTv_UsePhoneTime"
+                                android:layout_width="@dimen/dp0"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:hint="@string/select_answer"
+                                android:textSize="@dimen/sp14" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:contentDescription="选择使用时间"
+                                android:src="@drawable/next" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/acTv_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp16"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp16"
+                        android:textSize="@dimen/sp14"
+                        tools:visibility="visible"
+                        android:visibility="gone"
+                        tools:text="null"/>
+
+
+                    <!--就业证明-->
+                    <RelativeLayout
+                        android:id="@+id/rl_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp16"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp16"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/iv_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp120"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/data_update_bg" />
+
+                        <TextView
+                            android:id="@+id/tv_address_black_hint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/iv_address"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/dp20"
+                            android:text="Upload Address Verification"
+                            android:textColor="@color/black_333333"
+                            android:textSize="@dimen/sp14" />
+
+                        <TextView
+                            android:id="@+id/tv_address_gray_hint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_address_black_hint"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="NBI or police clearance or barangay certificate"
+                            android:textColor="@color/gray_c5"
+                            android:textSize="@dimen/sp12" />
+
+                    </RelativeLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_next"
+                        style="@style/ButtonTheme"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/dp40"
+                        android:text="@string/next" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_service_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp64"
+            android:src="@drawable/intelligent_service"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

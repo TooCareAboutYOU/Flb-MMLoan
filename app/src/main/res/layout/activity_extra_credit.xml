@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F7F6F9">
+
+        <include layout="@layout/include_toolbar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp21"
+            android:layout_marginStart="@dimen/dp17"
+            android:layout_marginLeft="@dimen/dp17"
+            android:layout_marginBottom="@dimen/dp7"
+            android:textColor="@color/gray_999999"
+            android:textSize="13sp"
+            android:text="Required field"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_Facebook"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp75"
+            android:paddingStart="@dimen/dp22"
+            android:paddingEnd="@dimen/dp22"
+            android:background="@android:color/white">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/acIv_facebook"
+                android:layout_width="@dimen/dp43"
+                android:layout_height="@dimen/dp43"
+                android:src="@drawable/img_facebook"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp11"
+                android:layout_marginLeft="@dimen/dp11"
+                app:layout_constraintLeft_toRightOf="@+id/acIv_facebook"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="16sp"
+                android:textColor="@color/black_333333"
+                android:text="Facebook"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acTv_go_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp17"
+                android:drawableEnd="@drawable/drawleft_certificate_selector"
+                android:drawableRight="@drawable/drawleft_certificate_selector"
+                android:drawablePadding="@dimen/dp9"
+                android:text="@string/go_to_certification"
+                android:textColor="@drawable/tv_certification_selector"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp21"
+            android:layout_marginStart="@dimen/dp17"
+            android:layout_marginLeft="@dimen/dp17"
+            android:layout_marginBottom="@dimen/dp7"
+            android:textColor="@color/gray_999999"
+            android:textSize="13sp"
+            android:text="Optional(Authorized for fast approval)"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_Grab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp75"
+            android:paddingStart="@dimen/dp22"
+            android:paddingEnd="@dimen/dp22"
+            android:background="@android:color/white">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/acIv_grab"
+                android:layout_width="@dimen/dp43"
+                android:layout_height="@dimen/dp43"
+                android:src="@drawable/img_grab"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp11"
+                android:layout_marginLeft="@dimen/dp11"
+                app:layout_constraintLeft_toRightOf="@+id/acIv_grab"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="16sp"
+                android:textColor="@color/black_333333"
+                android:text="Grab"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acTv_go_grab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:drawableEnd="@drawable/drawleft_certificate_selector"
+                android:drawableRight="@drawable/drawleft_certificate_selector"
+                android:drawablePadding="@dimen/dp9"
+                android:text="@string/go_to_certification"
+                android:textColor="@drawable/tv_certification_selector"
+                android:textSize="@dimen/sp14"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp0"
+            android:layout_weight="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp56"
+            android:background="@drawable/radius0_btn_main"
+            android:enabled="false"
+            android:layout_alignParentBottom="true"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

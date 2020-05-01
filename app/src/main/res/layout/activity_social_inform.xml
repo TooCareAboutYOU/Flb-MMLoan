@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/bg_F5F5F5">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:focusable="true"
+			android:focusableInTouchMode="true"
+			android:orientation="vertical">
+
+			<include layout="@layout/include_toolbar" />
+
+			<View style="@style/ViewStyle.Title" />
+
+			<LinearLayout
+				style="@style/LinearIdInform"
+				android:layout_marginTop="@dimen/dp10">
+
+				<TextView
+					style="@style/TvIdInformLeft"
+					android:text="Facebook" />
+
+				<com.mmkjflb.mmloan.utils.view.DeleteEditText
+					android:id="@+id/et_facebook_account"
+					style="@style/TvIdInformRight"
+					android:hint="@string/pls_input_facebook"
+					android:singleLine="true" />
+			</LinearLayout>
+			<View style="@style/line_marginleft_16dp" />
+
+			<LinearLayout style="@style/LinearIdInform">
+
+				<TextView
+					style="@style/TvIdInformLeft"
+					android:text="Email" />
+
+				<com.mmkjflb.mmloan.utils.view.DeleteEditText
+					android:id="@+id/et_email_account"
+					style="@style/TvIdInformRight"
+					android:hint="@string/pls_input_email"
+					android:singleLine="true" />
+			</LinearLayout>
+			<View style="@style/line_marginleft_16dp" />
+
+
+			<LinearLayout style="@style/LinearIdInform">
+
+				<TextView
+					style="@style/TvIdInformLeft"
+					android:text="Instagram" />
+
+				<com.mmkjflb.mmloan.utils.view.DeleteEditText
+					android:id="@+id/et_instagram_account"
+					style="@style/TvIdInformRight"
+					android:hint="@string/pls_input_instagram"
+					android:singleLine="true" />
+			</LinearLayout>
+
+
+			<View style="@style/line_marginleft_16dp" />
+
+			<LinearLayout style="@style/LinearIdInform">
+
+				<TextView
+					style="@style/TvIdInformLeft"
+					android:text="Whatsapp" />
+
+				<com.mmkjflb.mmloan.utils.view.DeleteEditText
+					android:id="@+id/et_whatsapp_account"
+					style="@style/TvIdInformRight"
+					android:hint="@string/pls_input_whatsapp"
+					android:singleLine="true" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="bottom"
+				android:orientation="vertical">
+
+				<androidx.appcompat.widget.AppCompatButton
+					android:id="@+id/btn_next"
+					style="@style/ButtonTheme"
+					android:enabled="false"
+					android:text="@string/next" />
+			</LinearLayout>
+		</LinearLayout>
+		<ImageView
+			android:id="@+id/iv_service_contact"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/intelligent_service"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="@dimen/dp20"
+			android:visibility="gone"
+			android:layout_marginBottom="@dimen/dp64"/>
+	</RelativeLayout>
+
+</layout>

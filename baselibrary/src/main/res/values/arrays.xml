@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="education_data">
+        <item>Primary school</item>
+        <item>Junior middle school</item>
+        <item>Senior middle school</item>
+        <item>University and above</item>
+    </string-array>
+    <string-array name="id_type">
+        <item>SSS Card</item>
+        <item>UMID</item>
+        <item>TIN</item>
+        <item>Passport</item>
+        <item>Driver License</item>
+        <item>Poster ID</item>
+        <item>Voters</item>
+    </string-array>
+    <string-array name="marry_data">
+        <item>Single</item>
+        <item>Married</item>
+        <item>Divorced</item>
+    </string-array>
+
+    <!--紧急联系人关系-->
+    <string-array name="emergency_realtionship">
+        <item>Emergency contact relationship</item>
+        <item>Parents</item>
+        <item>Spouse</item>
+        <item>Child</item>
+        <item>Relative</item>
+        <item>Colleague</item>
+        <item>Friend</item>
+        <item>Other</item>
+    </string-array>
+
+
+
+    <!--借款意向 期限-->
+    <string-array name="loan_intention">
+        <item>7Day</item>
+        <item>14Day</item>
+        <item>21Day</item>
+        <item>30Day</item>
+        <item>90Day</item>
+        <item>120Day</item>
+    </string-array>
+
+
+
+    <string-array name="sex_data">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+    <string-array name="child_data">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="traffic_data">
+        <item>None</item>
+        <item>Motorbike</item>
+        <item>Car</item>
+    </string-array>
+    <string-array name="work_nature_array">
+        <item>Staff</item>
+        <item>Freelance</item>
+        <item>Businessman</item>
+        <item>Student</item>
+    </string-array>
+
+    <string-array name="work_time_array">
+        <item>0-3 month</item>
+        <item>3-6 month</item>
+        <item>6 month - 1 year</item>
+        <item>1-3 year</item>
+        <item>>3 year</item>
+        <!--        0-3个月，3-6个月，6个月-1年，1-3年，>3年
+        对应code为   -3       -2         -1       1       4  -->
+    </string-array>
+
+    <!--发薪日-->
+    <string-array name="pay_cycle">
+        <item>Everyday</item>
+        <item>Once Every Week</item>
+        <item>Once Every Two Weeks</item>
+        <item>Once Every Month</item>
+    </string-array>
+
+
+    <string-array name="use_phone_time_array">
+        <item>1-3 months</item>
+        <item>3-6 months</item>
+        <item>6-12 months </item>
+        <item>1-3 years</item>
+        <item>over 3 years</item>
+    </string-array>
+
+    <string-array name="address_type_array">
+        <item>own</item>
+        <item>rent</item>
+        <item>lease</item>
+        <item>other</item>
+    </string-array>
+
+</resources>

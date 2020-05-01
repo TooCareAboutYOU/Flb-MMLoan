@@ -1,0 +1,8 @@
+<resources>
+    <string name="begin">Start</string>
+    <string name="remind_text01">Please sit down and face the front</string>
+    <string name="remind_text02">Please click to start</string>
+    <string name="remind_text03">Please keep one person facing the front</string>
+    <string name="remind_text04">Data is being collected, please keep shaking</string>
+    <string name="dialog_text">Data collection is completed, data analysis…</string>
+</resources>

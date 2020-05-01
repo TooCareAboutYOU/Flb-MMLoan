@@ -1,0 +1,139 @@
+apply plugin: 'cipher.so'
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: 'and_res_guard.gradle'
+apply plugin: 'io.fabric'
+
+
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+def httpPropertiesFile = rootProject.file("httpurl.properties")
+def httpProperties = new Properties()
+httpProperties.load(new FileInputStream(httpPropertiesFile))
+
+cipher.so {
+    keys {
+        //use to ：CipherClient.http_release
+        http_release { value = httpProperties['http_release'] }
+        http_pre_release { value = httpProperties['http_pre_release'] }
+        http_test { value = httpProperties['http_test'] }
+        http_privacy_protocol { value = httpProperties['http_privacy_protocol'] }
+        http_service_protocol { value = httpProperties['http_service_protocol'] }
+    }
+}
+
+android {
+    signingConfigs {
+        mmtsign {
+            storeFile file(keystoreProperties['keyStoreFilePath'])
+            storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+        }
+    }
+    compileSdkVersion var.compileSdkVersion
+    buildToolsVersion var.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.mmkj.mmloan"
+        minSdkVersion var.minSdkVersion
+        targetSdkVersion var.targetSdkVersion
+        versionCode 144
+        versionName "1.4.4"
+        multiDexEnabled true
+        ndk {
+            abiFilters "x86", "x86_64", "arm64-v8a", "armeabi-v7a" //, 'armeabi' //,"arm64-v8a", "armeabi-v7a",
+        }
+
+        //ARouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    lintOptions {
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.mmtsign
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.mmtsign
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    lintOptions {
+        //build release 版本 时 开启lint 检测
+//        checkReleaseBuilds false
+        //lint 遇到 error 时继续 构建
+        abortOnError false
+    }
+    dataBinding {
+        enabled true
+    }
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+
+    bundle {
+        density {
+            enableSplit true
+        }
+        abi {
+            enableSplit true
+        }
+        language {
+            enableSplit false
+        }
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    mavenCentral()
+}
+
+
+dependencies {
+    api fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    //排除同一个第三方依赖包的版本冲突
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0-alpha4', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+//        transitive false  //禁止传递依赖
+    })
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.19'
+    api project(path: ':usercenter')
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+//    implementation 'com.facebook.android:facebook-android-sdk:5.13.0'
+    implementation 'com.facebook.business.sdk:facebook-java-business-sdk:6.0.0'
+    implementation 'com.facebook.android:facebook-login:5.15.3'
+}
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android-extensions'

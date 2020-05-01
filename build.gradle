@@ -1,0 +1,62 @@
+buildscript {
+    ext.kotlin_version = '1.3.21'
+    repositories {
+        jcenter()
+        google()
+        mavenCentral()
+        maven {
+            url 'https://maven.fabric.io/public'
+        }
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.tencent.mm:AndResGuard-gradle-plugin:1.2.17'
+        classpath 'com.google.gms:google-services:4.3.3'
+//        classpath 'com.google.apis:google-api-services-androidpublisher:v3-rev20191113-1.30.3'
+        // Add dependency
+        classpath 'io.fabric.tools:gradle:1.29.0'  // Crashlytics plugin
+        classpath 'com.github.MEiDIK:Cipher.so:dev-SNAPSHOT'
+
+    }
+}
+allprojects {
+//    gradle.projectsEvaluated {
+//        tasks.withType(JavaCompile) {
+//            //检测不安全操作、过时属性
+//            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation" << "-Xlint:unchecked"
+//        }
+//    }
+
+    repositories {
+        jcenter()
+        google()
+        maven {
+            url 'https://jitpack.io'
+        }
+        maven {
+            url 'http://dl.bintray.com/gigamole/maven/'
+        }
+        flatDir {
+            dirs project(':baselibrary').file('libs')  //将xxx替换为引入aar文件的module名
+        }
+
+    }
+    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v13'
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+    var = [
+            minSdkVersion        : 16,
+            targetSdkVersion     : 28,
+            compileSdkVersion    : 28,
+            buildToolsVersion    : "28.0.3",
+            supportLibraryVersion: '1.0.0-beta01'
+    ]
+}
+

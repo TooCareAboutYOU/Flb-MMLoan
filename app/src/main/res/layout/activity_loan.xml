@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_F5F5F5"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp128"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_top"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/linear_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_toolbar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0"
+                android:layout_weight="1"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:id="@+id/linear_loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:layout_marginRight="@dimen/dp16"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/loan_bg"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/dp22"
+                        android:paddingBottom="@dimen/dp24">
+
+                        <TextView
+                            android:id="@+id/tv_loan_l1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:drawableLeft="@drawable/loan_amount"
+                            android:drawablePadding="@dimen/dp8"
+                            android:gravity="center_vertical"
+                            android:text="@string/loan_amount_yuan"
+                            android:textColor="@color/gray_9b9b9b"
+                            android:textSize="12sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_loan_amount"
+                            fontPath="fonts/DINCond-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp30"
+                            android:textColor="@android:color/black"
+                            android:textSize="41sp"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_loan_l1"
+                            tools:text="5,000" />
+
+
+                        <TextView
+                            android:id="@+id/tv_loan_rate_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp30"
+                            android:layout_marginTop="@dimen/dp108"
+                            android:text="@string/loan_rate_yuan"
+                            android:textColor="@color/gray_9b9b9b"
+                            android:textSize="12sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_loan_rate"
+                            fontPath="fonts/DINCond-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:text="0"
+                            android:textColor="@color/black_333333"
+                            android:textSize="22sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv_loan_rate_msg"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_loan_rate_msg" />
+
+                        <TextView
+                            android:id="@+id/tv_repay_fee_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp24"
+                            android:text="@string/repay_fee_yuan"
+                            android:textColor="@color/gray_939393"
+                            android:textSize="12sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv_loan_rate_msg"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_loan_rate" />
+
+                        <TextView
+                            android:id="@+id/tv_repay_fee"
+                            fontPath="fonts/DINCond-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:textColor="@color/black_333333"
+                            android:textSize="22sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv_repay_fee_msg"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_repay_fee_msg"
+                            tools:text="0" />
+
+                        <TextView
+                            android:id="@+id/tv_repay_date_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp24"
+                            android:text="@string/repay_rate"
+                            android:textColor="@color/gray_939393"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv_repay_fee_msg"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_repay_fee" />
+
+                        <TextView
+                            android:id="@+id/tv_repay_date"
+                            fontPath="fonts/DINCond-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:textColor="@color/black_333333"
+                            android:textSize="22sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv_repay_fee_msg"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_repay_date_msg"
+                            tools:text="0" />
+
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="@dimen/dp0"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5" />
+
+                        <TextView
+                            android:id="@+id/tv_loan_r1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/loan_deadline"
+                            android:drawablePadding="@dimen/dp4"
+                            android:gravity="center_vertical"
+                            android:text="@string/loan_deadline_day"
+                            android:textColor="@color/gray_9b9b9b"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toRightOf="@+id/guideline"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/tv_loan_deadline"
+                            fontPath="fonts/DINCond-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp14"
+                            android:textColor="@android:color/black"
+                            android:textSize="41sp"
+                            app:layout_constraintLeft_toRightOf="@+id/guideline"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_loan_r1"
+                            tools:text="14" />
+
+
+                        <TextView
+                            android:id="@+id/tv_withdrawfee_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp14"
+                            android:text="@string/withdraw_fee_yuan"
+                            android:textColor="@color/gray_939393"
+                            android:textSize="12sp"
+                            app:layout_constraintLeft_toRightOf="@id/guideline"
+                            app:layout_constraintTop_toTopOf="@+id/tv_loan_rate_msg" />
+
+                        <TextView
+                            android:id="@+id/tv_withdraw_fee"
+                            fontPath="fonts/DINCond-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/black_333333"
+                            android:textSize="22sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv_withdrawfee_msg"
+                            app:layout_constraintTop_toTopOf="@+id/tv_loan_rate" />
+
+                        <TextView
+                            android:id="@+id/tv_actual_account_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/actual_to_account_yuan"
+                            android:textColor="@color/gray_939393"
+                            android:textSize="12sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv_withdrawfee_msg"
+                            app:layout_constraintTop_toTopOf="@+id/tv_repay_fee_msg" />
+
+                        <TextView
+                            android:id="@+id/tv_actual_account"
+                            fontPath="fonts/DINCond-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/black_333333"
+                            android:textSize="22sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv_withdrawfee_msg"
+                            app:layout_constraintTop_toTopOf="@+id/tv_repay_fee" />
+
+                        <TextView
+                            android:id="@+id/tv_loan_fee_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/loan_inverest_yuan"
+                            android:textColor="@color/gray_939393"
+                            android:textSize="12sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv_withdrawfee_msg"
+                            app:layout_constraintTop_toTopOf="@+id/tv_repay_date_msg" />
+
+                        <TextView
+                            android:id="@+id/tv_loan_fee"
+                            fontPath="fonts/DINCond-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black_333333"
+                            android:textSize="22sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv_withdrawfee_msg"
+                            app:layout_constraintTop_toTopOf="@+id/tv_repay_date"
+                            tools:text="0" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp12"
+                        android:layout_marginBottom="@dimen/dp20"
+                        android:text="@string/hint_if_you"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/sp13" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp20"
+                        android:background="@drawable/radius4_white_shape"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Choose a withdrawal channel "
+                            android:textColor="#ff333333"
+                            android:textSize="15sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rc_channels"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp20"
+                            android:orientation="vertical"
+                            android:overScrollMode="never"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:spanCount="2"
+                            tools:itemCount="3"
+                            tools:listitem="@layout/item_payment_shop_list" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/dp15"
+                android:paddingHorizontal="@dimen/dp20">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_description"
+                    android:textColor="#FF931F"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/btn_loan_rightnow"
+                    style="@style/Radius3ButtonTheme"
+                    android:layout_marginTop="@dimen/dp13"
+                    android:enabled="false"
+                    android:paddingHorizontal="@dimen/dp20"
+                    android:text="@string/loan_rightnow" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

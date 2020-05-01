@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <GridView
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:columnWidth="@dimen/mis_dp_120"
+        android:horizontalSpacing="@dimen/mis_dp_2"
+        android:numColumns="auto_fit"
+        android:paddingBottom="?android:attr/actionBarSize"
+        android:verticalSpacing="@dimen/mis_dp_2" />
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="#cc000000"
+        android:clickable="true">
+
+        <Button
+            android:id="@+id/category_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:drawableRight="@drawable/mis_text_indicator"
+            android:drawablePadding="@dimen/mis_dp_5"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/mis_dp_16"
+            android:paddingRight="@dimen/mis_dp_16"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/mis_folder_text_color"
+            android:textSize="16sp"
+            tools:text="@string/mis_folder_all" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/login_bg" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/ll_register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp40"
+                android:paddingRight="@dimen/dp40">
+
+                <ImageView
+                    android:layout_width="@dimen/dp72"
+                    android:layout_height="@dimen/dp72"
+                    android:layout_marginTop="@dimen/dp36"
+                    android:src="@mipmap/ic_launcher" />
+
+                <LinearLayout
+                    style="@style/LinearRegisterStyle"
+                    android:layout_marginTop="@dimen/dp48">
+
+                    <ImageView
+                        style="@style/IvRegisterStyle"
+                        android:src="@drawable/phone" />
+
+                    <com.mmkjflb.mmloan.utils.view.DeleteEditText
+                        android:id="@+id/et_regiseter_account"
+                        style="@style/EtInputPhoneStyle"
+                        android:textSize="17sp"
+                        android:hint="@string/mobile_numb" />
+
+                </LinearLayout>
+
+                <View style="@style/ViewStyle" />
+
+                <LinearLayout
+                    style="@style/LinearRegisterStyle"
+                    android:layout_marginTop="@dimen/dp12">
+
+                    <ImageView
+                        style="@style/IvRegisterStyle"
+                        android:src="@drawable/smscode" />
+
+                    <EditText
+                        android:id="@+id/et_register_code"
+                        style="@style/EtInputPhoneStyle"
+                        android:hint="@string/verify_code"
+                        android:maxLength="8" />
+
+                    <TextView
+                        android:id="@+id/btn_register_sendcode"
+                        android:layout_width="@dimen/dp80"
+                        android:layout_height="@dimen/dp28"
+                        android:background="@drawable/radius25_green_selector"
+                        android:enabled="true"
+                        android:gravity="center"
+                        android:text="@string/get"
+                        android:textColor="@color/color_global"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <View style="@style/ViewStyle"/>
+
+                <LinearLayout
+                    style="@style/LinearRegisterStyle"
+                    android:layout_marginTop="@dimen/dp12">
+
+                    <ImageView
+                        style="@style/IvRegisterStyle"
+                        android:src="@drawable/verification_code" />
+
+                    <EditText
+                        android:id="@+id/et_imgcode"
+                        style="@style/EtInputPhoneStyle"
+                        android:hint="@string/sms_code"
+                        android:maxLength="4" />
+
+                    <ImageView
+                        android:id="@+id/iv_code"
+                        android:layout_width="80dp"
+                        android:layout_height="32dp"
+                        android:visibility="invisible"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+
+
+                <View style="@style/ViewStyle" />
+
+                <LinearLayout
+                    style="@style/LinearRegisterStyle"
+                    android:layout_marginTop="@dimen/dp12">
+
+                    <ImageView
+                        style="@style/IvRegisterStyle"
+                        android:src="@drawable/password" />
+
+                    <com.mmkjflb.mmloan.utils.view.DeleteEditText
+                        android:id="@+id/et_register_password"
+                        style="@style/EtWeightCommonStyle"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:maxLength="18" />
+
+                    <CheckBox
+                        android:id="@+id/ck_register_showpwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/password_selector"
+                        android:checked="true"
+                        android:gravity="right|center_vertical"
+                        android:paddingLeft="@dimen/dp4"
+                        android:paddingRight="@dimen/dp4" />
+
+                </LinearLayout>
+
+                <View style="@style/ViewStyle" />
+
+                <TextView
+                    android:id="@+id/btn_register_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10"
+                    android:paddingLeft="@dimen/dp2"
+                    android:paddingTop="@dimen/dp10"
+                    android:text="@string/agree_register"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/btn_register"
+                    style="@style/LoginButtonTheme"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:enabled="false"
+                    android:text="@string/sign_up" />
+
+                <TextView
+                    android:id="@+id/btn_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+</layout>

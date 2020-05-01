@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_F5F5F5"
+        >
+        <LinearLayout
+            style="@style/LinearIdInform"
+            android:layout_marginTop="@dimen/dp1"
+            android:visibility="gone"
+            >
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/work_nature" />
+
+            <TextView
+                style="@style/TvIdInformRightDrawable"
+                />
+        </LinearLayout>
+        <View style="@style/line_marginleft_16dp" />
+        <LinearLayout style="@style/LinearIdInform">
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/school" />
+
+            <EditText
+                android:id="@+id/ed_school_name"
+                style="@style/TvIdInformRight"
+                android:hint="@string/school_hint"
+                android:maxLength="100"
+                android:singleLine="true" />
+        </LinearLayout>
+        <View style="@style/line_marginleft_16dp" />
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/student_id"
+                android:maxLines="2"
+                />
+
+            <EditText
+                android:id="@+id/ed_student_number"
+                style="@style/TvIdInformRight"
+                android:hint="@string/student_id_hint"
+                android:maxLength="20"
+                android:singleLine="true" />
+        </LinearLayout>
+        <View style="@style/line_marginleft_16dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp10"
+            >
+            <ImageView
+                android:id="@+id/iv_data_update"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp120"
+                android:src="@drawable/data_update_bg"
+                android:scaleType="fitXY"
+                />
+            <TextView
+                android:id="@+id/tv_data_update_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp14"
+                android:text="@string/update_student_image"
+                android:textColor="@color/black_333333"
+                android:gravity="center"
+                android:layout_alignBottom="@+id/iv_data_update"
+                android:paddingBottom="@dimen/dp20"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

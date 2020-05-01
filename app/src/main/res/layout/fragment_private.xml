@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_F5F5F5"
+        >
+        <LinearLayout
+            style="@style/LinearIdInform"
+            android:layout_marginTop="@dimen/dp1"
+            android:visibility="gone"
+            >
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/work_nature" />
+
+            <TextView
+                style="@style/TvIdInformRightDrawable"
+                />
+        </LinearLayout>
+        <View style="@style/line_marginleft_16dp" />
+        <LinearLayout style="@style/LinearIdInform">
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/company_name" />
+
+            <EditText
+                android:id="@+id/et_company_name"
+                style="@style/TvIdInformRight"
+                android:hint="@string/company_name_hint"
+                android:singleLine="true" />
+        </LinearLayout>
+        <View style="@style/line_marginleft_16dp" />
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/company_tele" />
+
+            <EditText
+                android:id="@+id/et_company_tele"
+                style="@style/TvIdInformRight"
+                android:hint="@string/company_tele_hint"
+                android:inputType="phone"
+                android:maxLength="20"
+                android:singleLine="true" />
+        </LinearLayout>
+        <View style="@style/line_marginleft_16dp" />
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/company_email" />
+
+            <EditText
+                android:id="@+id/et_company_email"
+                style="@style/TvIdInformRight"
+                android:hint="@string/company_email_hint"
+                android:singleLine="true" />
+        </LinearLayout>
+        <View style="@style/line_marginleft_16dp" />
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/company_postcode" />
+
+            <EditText
+                android:id="@+id/et_company_postcode"
+                style="@style/TvIdInformRight"
+                android:hint="@string/company_postcode_hint"
+                android:maxLength="20"
+                android:singleLine="true" />
+        </LinearLayout>
+        <View style="@style/line_marginleft_16dp" />
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/company_address" />
+
+            <EditText
+                android:id="@+id/et_company_address"
+                style="@style/TvIdInformRight"
+                android:hint="@string/company_address_hint"
+                android:maxLength="100"
+                android:singleLine="true" />
+        </LinearLayout>
+        <View style="@style/line_marginleft_16dp" />
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/island" />
+
+            <TextView
+                android:id="@+id/tv_island"
+                style="@style/TvIdInformRightDrawable"
+                android:hint="@string/pls_chose_island"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/province" />
+
+            <TextView
+                android:id="@+id/tv_province"
+                style="@style/TvIdInformRightDrawable"
+                android:hint="@string/pls_chose_province"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+
+        <LinearLayout style="@style/LinearIdInform">
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/city" />
+
+            <TextView
+                android:id="@+id/tv_city"
+                style="@style/TvIdInformRightDrawable"
+                android:hint="@string/pls_chose_city"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View style="@style/line_marginleft_16dp" />
+        <LinearLayout style="@style/LinearIdInform"
+            android:visibility="gone"
+            >
+
+            <TextView
+                style="@style/TvIdInformLeft"
+                android:text="@string/live_address2" />
+
+            <EditText
+                android:id="@+id/et_liveaddress"
+                style="@style/TvIdInformRight"
+                android:hint="@string/detailed_address_hint"
+                android:singleLine="true"
+                android:maxLength="100"
+                />
+        </LinearLayout>
+        <View style="@style/line_marginleft_16dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp80"
+            >
+            <ImageView
+                android:id="@+id/iv_data_update"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp120"
+                android:src="@drawable/data_update_bg"
+                android:scaleType="fitXY"
+                />
+            <TextView
+                android:id="@+id/tv_data_update_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp14"
+                android:text="@string/update_company_license"
+                android:textColor="@color/black_333333"
+                android:gravity="center"
+                android:layout_alignBottom="@+id/iv_data_update"
+                android:paddingBottom="@dimen/dp20"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

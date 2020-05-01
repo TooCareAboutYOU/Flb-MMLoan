@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_global">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:src="@drawable/back_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Payment Code"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp16" />
+
+            <ImageView
+                android:id="@+id/iv_help"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:scaleType="center"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:src="@drawable/help" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginLeft="@dimen/dp17"
+                android:layout_marginRight="@dimen/dp17"
+                android:layout_marginStart="@dimen/dp17"
+                android:layout_marginEnd="@dimen/dp17"
+                android:orientation="vertical"
+                android:background="@drawable/sysdk_shape_dialog_bg">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:layout_gravity="center"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="13sp"
+                    android:text="Amount(₱)" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/acTv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black_584f60"
+                    android:textStyle="bold"
+                    android:textSize="35sp"
+                    fontPath="fonts/DIN1451.ttf"
+                    tools:text="2,500.00" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/acTv_money"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:src="@drawable/img_dotted_line" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/acTv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/dp5"
+                        android:paddingStart="@dimen/dp5"
+                        android:paddingRight="@dimen/dp5"
+                        android:paddingEnd="@dimen/dp5"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_999999"
+                        android:text="Payment Code"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintRight_toLeftOf="@+id/acTv_title"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/payment_code_decoration_left_pic"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@+id/acTv_title"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/payment_code_decoration_right_pic"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp61"
+                    android:layout_marginStart="@dimen/dp23"
+                    android:layout_marginLeft="@dimen/dp23"
+                    android:layout_marginEnd="@dimen/dp23"
+                    android:layout_marginRight="@dimen/dp23">
+                    <ImageView
+                        android:id="@+id/iv_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:background="@drawable/pay_code_loding"
+                        tools:ignore="ContentDescription" />
+                    <TextView
+                        android:id="@+id/tv_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="25sp"
+                        android:background="@drawable/background_payment_code"
+                        android:textColor="#FF8A00"
+                        tools:text="SK07 58664855001"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp100"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_jump_change_channel"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp43" >
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/acTv_change_channel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textColor="@color/blue_398afe"
+                        android:textSize="14sp"
+                        android:text="Check Payment Channel "/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/dp12"
+                        android:layout_height="@dimen/dp12"
+                        app:layout_constraintLeft_toRightOf="@+id/acTv_change_channel"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/img_green_next"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

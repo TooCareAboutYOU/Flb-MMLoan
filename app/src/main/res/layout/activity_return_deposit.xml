@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_F5F5F5"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp128"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_top"
+            tools:ignore="ContentDescription"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/linear_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_toolbar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linear_loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_marginRight="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/loan_bg"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/dp24"
+                        android:paddingTop="@dimen/dp22">
+
+                        <TextView
+                            android:id="@+id/tv_loan_l1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:drawableLeft="@drawable/loan_amount"
+                            android:drawablePadding="@dimen/dp8"
+                            android:gravity="center_vertical"
+                            android:text="@string/actual_received_amount"
+                            android:textColor="@color/gray_9b9b9b"
+                            android:textSize="12sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_loan_amount"
+                            fontPath="fonts/DINCond-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp30"
+                            tools:text="5,000"
+                            android:textColor="@color/black_333333"
+                            android:textSize="41sp"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_loan_l1" />
+
+
+                        <TextView
+                            android:id="@+id/tv_received_amount_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp30"
+                            android:layout_marginTop="@dimen/dp108"
+                            android:text="@string/amount_received"
+                            android:textColor="@color/gray_9b9b9b"
+                            android:textSize="12sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_received_amount"
+                            fontPath="fonts/DINCond-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:text="0"
+                            android:textColor="@color/black_333333"
+                            android:textSize="22sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv_received_amount_msg"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_received_amount_msg" />
+
+                        <TextView
+                            android:id="@+id/tv_poundage_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp24"
+                            android:text="@string/poundage_msg"
+                            android:textColor="@color/gray_939393"
+                            android:textSize="12sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv_received_amount_msg"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_received_amount" />
+
+                        <TextView
+                            android:id="@+id/tv_poundage_amount"
+                            fontPath="fonts/DINCond-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:text="175"
+                            android:textColor="@color/black_333333"
+                            android:textSize="22sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv_poundage_msg"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_poundage_msg" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="@dimen/dp0"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5" />
+
+                        <TextView
+                            android:id="@+id/tv_retrun_poundage_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/actual_to_account_yuan"
+                            android:textColor="@color/gray_939393"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="@dimen/dp14"
+                            app:layout_constraintLeft_toRightOf="@id/guideline"
+                            app:layout_constraintTop_toTopOf="@+id/tv_poundage_msg" />
+
+                        <TextView
+                            android:id="@+id/tv_retrun_poundage"
+                            fontPath="fonts/DINCond-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/black_333333"
+                            android:textSize="22sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv_retrun_poundage_msg"
+                            app:layout_constraintTop_toTopOf="@+id/tv_poundage_amount" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_withdraw_channel"
+                        style="@style/LinearChoseDialog"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="@drawable/radius4_white_shape">
+
+                        <TextView
+                            style="@style/TvLeftChoseDialog"
+                            android:text="@string/withdraw_channel"
+                            android:textColor="@color/black_333333" />
+
+                        <TextView
+                            android:id="@+id/tv_withdraw_channel"
+                            style="@style/TvBaseInformRightDrawable"
+                            android:hint="@string/select_awithdrawal_channel" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btn_loan_rightnow"
+                        style="@style/Radius3ButtonTheme"
+                        android:layout_marginTop="@dimen/dp48"
+                        android:enabled="false"
+                        android:text="@string/refund_deposit_rightnow" />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TvCenter">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp44</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black_333333</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">@dimen/dp14</item>
+        <item name="android:paddingLeft">@dimen/dp54</item>
+    </style>
+
+    <style name="TvSetting">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp50</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black_333333</item>
+        <item name="android:drawableRight">@drawable/next</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingRight">@dimen/dp14</item>
+        <item name="android:paddingLeft">@dimen/dp16</item>
+    </style>
+    <style name="loan_item_style">
+        <!--<item name="android:layout_marginTop">@dimen/dp20</item>-->
+        <item name="android:layout_width">match_parent</item>
+
+        <!--<item name="android:background">@color/white</item>-->
+    </style>
+    <!--my borrow id-->
+    <style name="TvIdInformLeft">
+        <item name="android:layout_width">@dimen/dp0</item>
+        <item name="android:layout_weight">8</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/black_333333</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <!--身份信息-->
+    <style name="LinearIdInform">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp50</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingLeft">@dimen/dp16</item>
+        <item name="android:paddingRight">@dimen/dp16</item>
+    </style>
+
+
+    <style name="improve_content_style">
+        <item name="android:layout_marginLeft">@dimen/dp14</item>
+        <item name="android:layout_marginRight">@dimen/dp25</item>
+        <item name="android:layout_marginTop">@dimen/dp15</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/gray_95</item>
+        <item name="android:textSize">@dimen/sp12</item>
+    </style>
+
+    <style name="improve_item_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp8</item>
+    </style>
+</resources>
